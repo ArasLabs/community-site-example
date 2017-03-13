@@ -114,9 +114,9 @@
    <Item type="TOC Access" id="13112B24A9664BE78EBBC2AFA5D7667B" action="add">
     <category>Development</category>
     <classification>/*</classification>
-    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
-    <sort_order>128</sort_order>
-    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+	   <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+	   <sort_order>128</sort_order>
+	   <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
    </Item>
    <Item type="View" id="38AEF95B1C8342D9892BDCD4CC0B942A" action="add">
     <classification>/*</classification>

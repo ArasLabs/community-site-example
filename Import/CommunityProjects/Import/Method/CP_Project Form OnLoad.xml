@@ -1,0 +1,40 @@
+﻿<AML>
+ <Item type="Method" id="C59C60B6CA7D4804B17469B017565930" action="add">
+  <method_code><![CDATA[// CP Community Projects Form OnLoad
+//
+//  07.21.2008  peter schroer   initial release
+//
+//  For a new Project (the Created_By field is blank)
+//    Make this User the Owner
+//
+// ===========================================================================================================================
+if (document.forms[0].created_by_id_system.value === '') {
+   var MyItem = document.thisItem.newItem('Alias','get');
+   MyItem.setAttribute("select","related_id(id,keyed_name)");
+   MyItem.setAttribute("expand","0");
+   MyItem.setProperty("source_id",  top.aras.getUserID() );
+   MyItem = MyItem.apply();
+   
+   if (MyItem.isError() ) {
+      alert(MyItem.getGetErrorDetail() );
+      return;
+   }
+   
+   MyItem = MyItem.getItemsByXPath("//Item[@type='Alias']/related_id/Item[@type='Identity']");
+   if (MyItem.getItemCount() ===0 ) {
+      alert('No Alias Found in:  ' + MyItem.getItemByIndex(0).node.xml );
+      return;
+   }
+   MyItem = MyItem.getItemByIndex(0);
+   
+   var relID = MyItem.getID();
+   var relKN = MyItem.getProperty('keyed_name','na');
+   
+   handleItemChange('owned_by_id', relID);
+   document.forms[0].owned_by_id.value = relKN;  
+
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>CP_Project Form OnLoad</name>
+ </Item>
+</AML>
