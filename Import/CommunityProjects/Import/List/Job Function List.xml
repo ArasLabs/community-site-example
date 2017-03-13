@@ -1,0 +1,56 @@
+﻿<AML>
+ <Item type="List" id="DF709A71E7584284ADAD74F715CE8D16" action="add">
+  <description>List of Contact job Functions</description>
+  <name>Job Function List</name>
+  <Relationships>
+   <Item type="Value" id="0E4A0E6F708D46669096F8BA2D878B67" action="add">
+    <label>Corporate Mgt</label>
+    <sort_order>70</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Corporate Mgt</value>
+   </Item>
+   <Item type="Value" id="3D9F5C0641984140BA4E0A9B252BBAF9" action="add">
+    <label>Engineering</label>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Engineering</value>
+   </Item>
+   <Item type="Value" id="328C860BE2604FD990B7A2CA5EA6FB68" action="add">
+    <label>IT</label>
+    <sort_order>60</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>IT</value>
+   </Item>
+   <Item type="Value" id="F14EEA5D1A674B809B6AB54978AEC77B" action="add">
+    <label>Operations</label>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Operations</value>
+   </Item>
+   <Item type="Value" id="FC63E6AC4C364FA5988E20C4CFC2502B" action="add">
+    <label>Other</label>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Other</value>
+   </Item>
+  
+   <Item type="Value" id="D75972AAD18D43B394369438B872FB7C" action="add">
+    <label>Procurement</label>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Procurement</value>
+   </Item>
+   <Item type="Value" id="6843A92B57DF4A7AAD0993574ACF2484" action="add">
+    <label>Quality</label>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Quality</value>
+   </Item>
+   <Item type="Value" id="2155C171100444F6819381113AED9C90" action="add">
+    <label>Sales &amp; Marketing</label>
+    <sort_order>50</sort_order>
+    <source_id keyed_name="Job Function List" type="List">DF709A71E7584284ADAD74F715CE8D16</source_id>
+    <value>Sales &amp; Marketing</value>
+   </Item></Relationships>
+ </Item>
+</AML>
