@@ -1,0 +1,25 @@
+<AML>
+ <Item type="SQL" id="47CE7665AFA34F268A06B4845ACD5CE6" action="add">
+  <execution_count>2</execution_count>
+  <execution_flag>manual</execution_flag>
+  <name>COMMUNITY_PROJECT_REVIEW_ROLLUP</name>
+  <old_name>COMMUNITY_PROJECT_REVIEW_ROLLUP</old_name>
+  <sqlserver_body><![CDATA[CREATE TRIGGER [COMMUNITY_PROJECT_REVIEW_ROLLUP] ON [innovator].[CP_REVIEWS] 
+FOR INSERT
+AS
+/*
+This trigger checks updates the CP_CommunityProject.rating
+based on an update to this table.
+*/
+ 
+BEGIN
+      UPDATE [CP_COMMUNITYPROJECT]
+      SET   RATING = (select avg( cast(rating as Float) ) from [CP_REVIEWS] where source_id in (select source_id from inserted))  
+      WHERE CP_COMMUNITYPROJECT.id in (select source_id from inserted)
+END
+]]></sqlserver_body>
+  <stale>0</stale>
+  <transform_first>0</transform_first>
+  <type>trigger</type>
+ </Item>
+</AML>

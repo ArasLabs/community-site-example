@@ -1,0 +1,128 @@
+<AML>
+ <Item type="RelationshipType" id="DA2BA468A6C94E60BD4AA8A18482DC21" action="add" dependencyLevel="0">
+  <auto_search>1</auto_search>
+  <behavior>float</behavior>
+  <copy_permissions>0</copy_permissions>
+  <create_related>0</create_related>
+  <hide_in_all>0</hide_in_all>
+  <inc_rel_key_name>1</inc_rel_key_name>
+  <inc_related_key_name>1</inc_related_key_name>
+  <is_list_type>0</is_list_type>
+  <label>Reviews</label>
+  <name>CP_Reviews</name>
+  <new_show_related>0</new_show_related>
+  <related_notnull>0</related_notnull>
+  <related_option>2</related_option>
+  <relationship_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">
+   <Item type="ItemType" id="6F674ADAE7CC4C07BD6A6C4E26DA683C" action="add">
+    <allow_private_permission>1</allow_private_permission>
+    <auto_search>0</auto_search>
+    <default_lifecycle keyed_name="Default" type="Life Cycle Map">2F3B75E17C4E4F2D9599579A965BFA64</default_lifecycle>
+    <hide_where_used>0</hide_where_used>
+    <implementation_type>table</implementation_type>
+    <instance_data>CP_REVIEWS</instance_data>
+    <is_dependent>0</is_dependent>
+    <is_relationship>1</is_relationship>
+    <is_versionable>0</is_versionable>
+    <manual_versioning>0</manual_versioning>
+    <name>CP_Reviews</name>
+    <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+    <save_history>0</save_history>
+    <show_parameters_tab>1</show_parameters_tab>
+    <unlock_on_logout>0</unlock_on_logout>
+    <use_src_access>1</use_src_access>
+    <Relationships>
+     <Item type="Property" id="02F5674A5EC340A1B77B8B1E2B341307" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>120</column_width>
+      <data_source keyed_name="Contact" type="ItemType" name="Contact">579E2E64FE4A4683825B46500B05DFEF</data_source>
+      <data_type>item</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <item_behavior>float</item_behavior>
+      <label>Author</label>
+      <name>author</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>2</sort_order>
+      <source_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">6F674ADAE7CC4C07BD6A6C4E26DA683C</source_id>
+     </Item>
+     <Item type="Property" id="4D13A4130DEC4EBE953FDFB735F97357" action="add">
+      <column_alignment>center</column_alignment>
+      <column_width>90</column_width>
+      <data_type>integer</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label>Rating</label>
+      <name>rating</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>1</sort_order>
+      <source_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">6F674ADAE7CC4C07BD6A6C4E26DA683C</source_id>
+     </Item>
+     <Item type="Property" id="CE730C2A59B8436A9F512E63F4537B09" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>600</column_width>
+      <data_type>string</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label>Review</label>
+      <name>review</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>4</sort_order>
+      <source_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">6F674ADAE7CC4C07BD6A6C4E26DA683C</source_id>
+      <stored_length>1000</stored_length>
+     </Item>
+     <Item type="View" id="20AA6B8630A04770A452662D4CD927E4" action="add">
+      <client>js</client>
+      <related_id keyed_name="CP_Reviews" type="Form">4CD2744A64FF4B0592257939B01ADDEE</related_id>
+      <role keyed_name="World" type="Identity">
+       <Item type="Identity" action="get" select="id">
+        <name>World</name>
+       </Item>
+      </role>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">6F674ADAE7CC4C07BD6A6C4E26DA683C</source_id>
+      <type>default</type>
+     </Item>
+    </Relationships>
+   </Item>
+  </relationship_id>
+  <sort_order>4</sort_order>
+  <source_id keyed_name="CP_CommunityProject" type="ItemType" name="CP_CommunityProject">DE5547718FDA434584EF60EC21D9D6F2</source_id>
+ </Item>
+ <Item type="ItemType" id="6F674ADAE7CC4C07BD6A6C4E26DA683C" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='6F674ADAE7CC4C07BD6A6C4E26DA683C' and name='created_on'">
+    <column_alignment>center</column_alignment>
+    <data_type>date</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label>Date</label>
+    <name>created_on</name>
+    <pattern>MM/dd/yyyy</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>3</sort_order>
+    <source_id keyed_name="CP_Reviews" type="ItemType" name="CP_Reviews">6F674ADAE7CC4C07BD6A6C4E26DA683C</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

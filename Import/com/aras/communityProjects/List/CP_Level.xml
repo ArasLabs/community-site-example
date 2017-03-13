@@ -1,0 +1,32 @@
+<AML>
+ <Item type="List" id="3232DBC0BB7E409DB7C5DFC691017801" action="add">
+  <description>Community Projects</description>
+  <name>CP_Level</name>
+  <Relationships>
+   <Item type="Value" id="713AB604430743C09BFE205AE43822B8" action="add">
+    <label>Certified</label>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="CP_Level" type="List">3232DBC0BB7E409DB7C5DFC691017801</source_id>
+    <value>Certifed</value>
+   </Item>
+  
+   <Item type="Value" id="58C8E2A549384FECB4766A7E6A2C8F56" action="add">
+    <label>Registered</label>
+    <sort_order>4</sort_order>
+    <source_id keyed_name="CP_Level" type="List">3232DBC0BB7E409DB7C5DFC691017801</source_id>
+    <value>Registered</value>
+   </Item>
+   <Item type="Value" id="AFC70C238FA94EC789BADABBD68488A9" action="add">
+    <label>Unknown</label>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="CP_Level" type="List">3232DBC0BB7E409DB7C5DFC691017801</source_id>
+    <value>Unknown</value>
+   </Item>
+   <Item type="Value" id="1B8E699D6A0C47C4909364779524B409" action="add">
+    <label>Verified</label>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="CP_Level" type="List">3232DBC0BB7E409DB7C5DFC691017801</source_id>
+    <value>Verified</value>
+   </Item></Relationships>
+ </Item>
+</AML>

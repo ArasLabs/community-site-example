@@ -1,0 +1,48 @@
+<AML>
+ <Item type="Permission" id="E9524091F5AB4694A87C71B92FB8AA99" action="add">
+  <is_private>0</is_private>
+  <name>CP_Project_Active</name>
+  <Relationships>
+   <Item type="Access" id="4858DBF7A3AE4BE6A80B6A9879334DEE" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+   <Item type="Access" id="BDE145F30F14490E8E2BD7DAB32EF996" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+  
+   <Item type="Access" id="D77C81E6667343C49949C6070101E980" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Web2lead " type="Identity">ADA8256D932D46898423D506332EC187</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+   <Item type="Access" id="54EA436C3BFB4712BBF1157999AAFB2F" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

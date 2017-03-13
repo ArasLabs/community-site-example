@@ -1,0 +1,35 @@
+#tabs_winlike{
+	position:relative;
+	border-bottom: 2px solid white;
+	width:100%;
+	height:31;
+	top:0;
+	cursor:default;
+	margin-bottom:1px;
+	background-color:#FFFFFF;
+}
+#tabs_winlike span{
+	position:absolute;
+	text-align:center;
+	font-size: 14px;
+	font-family: Arial-bold;
+	top:10;
+	border-right: 3px groove gray;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	background-color: #d4d0c8;
+}
+#tabs_winlike span.inactive{
+	padding-top: 2px;
+	width:100;
+	height:20;
+	z-index:100;
+}
+#tabs_winlike span.active{
+	padding-top: 5px;
+	top:5;
+	width:102;
+	height:26;
+	z-index:200;
+	background-color: #d4d0DA;
+}
