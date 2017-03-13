@@ -1,6 +1,8 @@
 ﻿<AML>
  <Item type="Action" id="6E46D8B2D1BF4B45A5694326BCEA424C" action="add">
+  <classification>/*</classification>
   <item_query>___is_new___</item_query>
+  <label xml:lang="en">CP Increment Download</label>
   <location>server</location>
   <method keyed_name="CP DOWNLOAD INCREMENT" type="Method">
    <Item type="Method" action="get" select="id">

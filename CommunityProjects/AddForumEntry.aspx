@@ -1,4 +1,4 @@
-<%@ Page CodeBehind="AddReview.aspx.vb" Language="vb" AutoEventWireup="false" Inherits="CommunityProjects.AddReview" %>
+<%@ Page CodeBehind="AddReview.aspx.vb" Language="vb" AutoEventWireup="false" Inherits="CommunityProjects.AddReview"  %>
 <%
 	Dim id as String=Request.QueryString("pid")
 	Dim author as String=Request.QueryString("author")

@@ -182,7 +182,7 @@ Public Class TOC
         Dim AML As String = ""
         Dim Result As Object = New XmlDocument
 
-        AML = "<Item type='CP_CommunityProject' action='get' select='name,author(keyed_name,email),description,downloads,url,rating,cp_type,cp_level,cp_category,license,versions,dev_status,screenshot(filename),thumbnail(filename)' id='" & id & "'></Item>"
+        AML = "<Item type='CP_CommunityProject' action='get' select='name,author(keyed_name,email),description,downloads,url,rating,cp_level,is_verified,is_exchange,is_commercial,is_open,cp_category,license,versions,dev_status,screenshot(filename),thumbnail(filename)' id='" & id & "'></Item>"
         Result.loadXML(SendAML("ApplyItem", AML, ConfigDom, LogName, False))
         'Result.Save("C:\inetpub\wwwroot\CommunityProjects\logs\ProjectDetailResult.xml")
         ' need to massage and/or set default values for the Thumbnail and the Screenshot

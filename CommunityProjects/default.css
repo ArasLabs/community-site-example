@@ -1,0 +1,465 @@
+﻿body
+{
+  background-color: #ffffff;
+}
+th
+{
+  font-weight: bold;
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  background-color: buttonface;
+}
+td
+{
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+a:hover
+{
+  text-decoration: underline;
+}
+a
+{
+  font-size: 8pt;
+  color: #000000;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  text-decoration: none;
+}
+fieldset
+{
+  display: inline;
+  border-right: 2px groove;
+  border-top: 2px groove;
+  border-left: 2px groove;
+  border-bottom: 2px groove;
+}
+table
+{
+  border-width: 0px;
+}
+legend
+{
+  font-size: 8pt;
+  text-transform: capitalize;
+  color: #000000;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+li
+{
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+input
+{
+  font-family: tahoma;
+  font-size: 8pt;
+}
+
+textarea
+{
+  font-family: tahoma;
+  font-size: 8pt;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+select
+{
+  font-size: 8pt;
+  font-family: tahoma;
+}
+p
+{
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+.body_edit, .body_print, .body_search, .body_view
+{
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.prompt
+{
+  font-weight: bold;
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  text-align: right;
+}
+.tiny
+{
+  font-size: 6pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+.small
+{
+  font-size: 8pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+.medium
+{
+  font-size: 9pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+.big
+{
+  font-size: 10pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+.vbig
+{
+  font-size: 12pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+.vvbig
+{
+  font-weight: bold;
+  font-size: 14pt;
+  font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+/* ******************* Form fields ******************* */
+.sys_f_container
+{
+  display: inline;
+  position: absolute;
+}
+
+.sys_f_border
+{
+  border: groove 0px;
+  display: inline;
+  left: 0px;
+}
+
+.sys_f_legend
+{
+}
+
+.sys_f_table
+{
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+.sys_f_tbody
+{
+}
+
+.sys_f_tr
+{
+}
+
+.sys_f_label_container
+{
+  font-weight: bold;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 0px;
+}
+
+.sys_f_value_container
+{
+  white-space: nowrap;
+  padding: 0px;
+}
+
+.sys_f_label
+{
+  display: inline;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  font-size: 8pt;
+  text-transform: capitalize;
+  direction: inherit;
+}
+
+.sys_f_label_bottom
+{
+  vertical-align: top;
+}
+
+.sys_f_label_left
+{
+  padding-right: 0.4em;
+  vertical-align: middle;
+}
+
+.sys_f_label_right
+{
+  padding-left: 0.4em;
+  vertical-align: middle;
+}
+
+.sys_f_label_top
+{
+  vertical-align: top;
+}
+
+.sys_f_value
+{
+  display: inline;
+  direction: inherit;
+}
+
+.sys_f_value_bottom
+{
+  vertical-align: top;
+}
+
+.sys_f_value_left
+{
+  vertical-align: middle;
+}
+
+.sys_f_value_right
+{
+  vertical-align: middle;
+}
+
+.sys_f_value_top
+{
+  vertical-align: top;
+}
+
+.sys_f_restricted_msg
+{
+  overflow: hidden;
+  cursor: hand;
+  display: none;
+  color: red;
+}
+
+.sys_f_empty_label_container
+{
+  display: none;
+}
+
+/* +++ field type specific rules */
+.sys_ft_button
+{
+}
+.sys_ft_checkbox
+{
+}
+.sys_ft_checkbox_list
+{
+}
+.sys_ft_class_structure
+{
+}
+.sys_ft_color
+{
+}
+.sys_ft_color_list
+{
+}
+.sys_ft_date
+{
+}
+.sys_ft_dropdown
+{
+}
+.sys_ft_file_item
+{
+}
+.sys_ft_formatted_text
+{
+}
+.sys_ft_groupbox
+{
+}
+.sys_ft_html
+{
+}
+.sys_ft_image
+{
+}
+.sys_ft_item
+{
+}
+.sys_ft_label
+{
+}
+.sys_ft_listbox_multi_select
+{
+}
+.sys_ft_listbox_single_select
+{
+}
+.sys_ft_ml_string
+{
+}
+.sys_ft_nested_form
+{
+}
+.sys_ft_password
+{
+}
+.sys_ft_radio_button_list
+{
+}
+.sys_ft_text
+{
+}
+.sys_ft_textarea
+{
+}
+
+.sys_ft_button .sys_f_label_container
+{
+  display: none;
+}
+
+.sys_ft_label .sys_f_label_container
+{
+  display: none;
+}
+
+.sys_groupbox_content_horizontal
+{
+  display: inline;
+}
+
+.sys_groupbox_content_vertical
+{
+  display: inline;
+}
+
+.sys_f_container_in_horizontal_groupbox
+{
+  vertical-align: top;
+}
+
+.sys_f_container_in_vertical_groupbox
+{
+  display: block;
+}
+/* --- field type specific rules */
+
+/* +++ property data type specific rules */
+.sys_dt_string
+{
+}
+/* --- property data type specific rules */
+
+/* +++ rules specific to different attributes of property */
+.sys_ft_color.sys_p_is_required input,
+.sys_ft_color_list.sys_p_is_required select
+{
+}
+
+.sys_ft_checkbox.sys_p_is_required input,
+.sys_ft_checkbox_list.sys_p_is_required input,
+.sys_ft_date.sys_p_is_required input,
+.sys_ft_dropdown.sys_p_is_required select,
+.sys_ft_file_item.sys_p_is_required input,
+.sys_ft_item.sys_p_is_required input,
+.sys_ft_listbox_multi_select.sys_p_is_required select,
+.sys_ft_listbox_single_select.sys_p_is_required select,
+.sys_ft_ml_string.sys_p_is_required input,
+.sys_ft_password.sys_p_is_required input,
+.sys_ft_radio_button_list.sys_p_is_required input,
+.sys_ft_text.sys_p_is_required input,
+.sys_ft_textarea.sys_p_is_required textarea
+{
+  background-color: #f5f5dc;
+}
+
+.sys_p_is_readonly
+{
+}
+/* --- rules specific to different attributes of property */
+
+.tr_IE_fix_bug_with_height
+{
+  width: 100%;
+  height: expression(
+    function f(el)
+    {
+      var parentEl = el.parentNode;
+      if (parentEl.tagName == "TBODY")
+      {
+        var docClientHeightVar   = "$IE$tr$height$bug$documentClientHeight$" + el.uniqueID;
+        var tbodyOffsetHeightVar = "$IE$tr$height$bug$tbodyOffsetHeight$" + el.uniqueID;
+        var prevDocHeight = window[docClientHeightVar];
+        var currDocHeight = document.documentElement.clientHeight;
+        
+        var prevTBodyHeight = window[tbodyOffsetHeightVar];
+        var currTBodyHeight = parentEl.offsetHeight;
+        
+        if (
+              (prevDocHeight !== undefined && prevDocHeight > currDocHeight) ||
+              (prevTBodyHeight !== undefined && prevTBodyHeight != currTBodyHeight)
+            )
+        {
+          el.style.height = "";
+        }
+      
+      var resultHeight = parentEl.offsetHeight;
+      var rows = parentEl.rows;
+      for (var i = 0,L=rows.length; i < L; i++)
+      {
+        var row = rows[i];
+        if (row != el && row.style.display != "none")
+          resultHeight -= row.style.pixelHeight;
+      }
+        
+      window[docClientHeightVar] = currDocHeight;
+      window[tbodyOffsetHeightVar] = parentEl.offsetHeight;
+      return (resultHeight + "px");           
+    }           
+    else           
+    {             
+      f(parentEl);           
+    }
+  }, f(this));
+}
+.sys_label_lang_direction_rtl .sys_f_table
+{
+  direction: rtl;
+}
+
+.sys_label_lang_direction_ltr .sys_f_table
+{
+  direction: ltr;
+}
+
+.sys_session_lang_direction_rtl .sys_f_value_container
+{
+  direction: rtl;
+}
+
+.sys_session_lang_direction_ltr .sys_f_value_container
+{
+  direction: ltr;
+}
+/* **************** @media print **************** */
+@media print
+{
+  .body_print
+  {
+    border: none;
+    overflow: hidden;
+  }
+
+  .html_print
+  {
+    border: none;
+    overflow: hidden;
+  }
+
+  #relationships
+  {
+    display: block;
+    border-top: groove 2px;
+  }
+
+  .sys_ft_groupbox .sys_f_value_container
+  {
+    white-space: normal;
+  }
+}
+/* **************** @media print **************** */

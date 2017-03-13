@@ -1,0 +1,157 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="21693EDFCB8E4120BC17C30C3A8F6BF9" action="add">
+  <classification>/*</classification>
+  <name>cp_Registration</name>
+  <start_state keyed_name="new" type="Life Cycle State">105EC82A9B8F43FB80FA649F9C3BAC02</start_state>
+  <Relationships>
+   <Item type="Life Cycle State" id="AC97DC79661B4BB481EA10E04AD32814" action="add">
+    <classification>/*</classification>
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>In Review</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <x>156</x>
+    <y>45</y>
+   </Item>
+   <Item type="Life Cycle State" id="105EC82A9B8F43FB80FA649F9C3BAC02" action="add">
+    <classification>/*</classification>
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>new</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <x>30</x>
+    <y>45</y>
+   </Item>
+   <Item type="Life Cycle State" id="946BB856D7154B73B0FE0A2F1BC4072C" action="add">
+    <classification>/*</classification>
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Obsolete</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <x>310</x>
+    <y>153</y>
+   </Item>
+   <Item type="Life Cycle State" id="4215BDFEA622458B9655E8645B3152DB" action="add">
+    <classification>/*</classification>
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Registered</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <x>308</x>
+    <y>45</y>
+   </Item>
+   <Item type="Life Cycle State" id="45FC7BCF5E244995BDAC7E17AFA4DC34" action="add">
+    <classification>/*</classification>
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Rework</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <x>152</x>
+    <y>153</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="C526AD724B064081A074B945A88630F6" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="In Review" type="Life Cycle State">AC97DC79661B4BB481EA10E04AD32814</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</role>
+    <segments>260,73|322,124</segments>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="Obsolete" type="Life Cycle State">946BB856D7154B73B0FE0A2F1BC4072C</to_state>
+    <x>145</x>
+    <y>60</y>
+   </Item>
+  
+   <Item type="Life Cycle Transition" id="010660F2671943B39F2201EFA32F3349" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="In Review" type="Life Cycle State">AC97DC79661B4BB481EA10E04AD32814</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</role>
+    <segments></segments>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="Registered" type="Life Cycle State">4215BDFEA622458B9655E8645B3152DB</to_state>
+    <x>49</x>
+    <y>-2</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="80EB14C4D1694EEC981169D322A54B0F" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="In Review" type="Life Cycle State">AC97DC79661B4BB481EA10E04AD32814</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</role>
+    <segments>205,78|205,126</segments>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="Rework" type="Life Cycle State">45FC7BCF5E244995BDAC7E17AFA4DC34</to_state>
+    <x>39</x>
+    <y>56</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="1AD7C133EEF544B8BF3109D2099B76AE" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="new" type="Life Cycle State">105EC82A9B8F43FB80FA649F9C3BAC02</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <segments></segments>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">AC97DC79661B4BB481EA10E04AD32814</to_state>
+    <x>35</x>
+    <y>-5</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="6C73D3758F414AE986A5210E0E572D20" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="Registered" type="Life Cycle State">4215BDFEA622458B9655E8645B3152DB</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</role>
+    <segments>389,73|389,125</segments>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="Obsolete" type="Life Cycle State">946BB856D7154B73B0FE0A2F1BC4072C</to_state>
+    <x>74</x>
+    <y>58</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="5C264CB6274441BCA3E77E8432B131BD" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="Rework" type="Life Cycle State">45FC7BCF5E244995BDAC7E17AFA4DC34</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <segments>120,123|120,76</segments>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">AC97DC79661B4BB481EA10E04AD32814</to_state>
+    <x>-81</x>
+    <y>-48</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="9C6A6E69ACC24866AD364E4CF6DFF48C" action="add">
+    <classification>/*</classification>
+    <from_state keyed_name="Rework" type="Life Cycle State">45FC7BCF5E244995BDAC7E17AFA4DC34</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</source_id>
+    <to_state keyed_name="Obsolete" type="Life Cycle State">946BB856D7154B73B0FE0A2F1BC4072C</to_state>
+   </Item></Relationships>
+ </Item>
+</AML>

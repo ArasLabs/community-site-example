@@ -1,79 +1,43 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-  <HEAD>
-		<title>projectMain</title>
-		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
-		<meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
-		<meta name="vs_defaultClientScript" content="JavaScript">
-		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		
-		<link rel="stylesheet" type media=screen href="http://www.aras.com/images/tempLayoutFiles/temp_formatting.css" text css??>
-		<link rel="stylesheet" type media=screen href="http://www.aras.com/images/tempLayoutFiles/temp_typefaces.css" text css??>
-		<link rel="stylesheet" type media=screen href="http://www.aras.com/images/tempLayoutFiles/temp_navTop.css" text css??>
-		<link rel="stylesheet" type media=screen href="http://www.aras.com/images/tempLayoutFiles/temp_navSide.css" text css??>
-		<link rel="stylesheet" type media=screen href="http://www.aras.com/images/tempLayoutFiles/temp_screen.css" text css??>
-		<link rel="stylesheet" type media=print href="http://www.aras.com/images/tempLayoutFiles/temp_print.css" text css??>
-		<link rel="Shortcut Icon" href="http://www.aras.com/aras.ico" type="image/x-icon" >
-		<link rel="stylesheet" type="text/css" href="http://www.aras.com/images/tempLayoutFiles/temp_layout.css" title="layout" media="screen" >
-		<link rel="stylesheet" type="text/css" href="http://www.aras.com/images/tempLayoutFiles/temp_landingPage.css" title="layout" media="screen" >
-  </HEAD>
-	<body height="100%" scroll="no">
-		<h1 align="left">Welcome to the Aras Community Project Site</h1>
-		<table width="100%" cellpadding="0" cellspacing="0" scroll="no">
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC"  %>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"  lang="en" >
+<head>
+<title>projectMain</title>
+<meta name="Description" content="Aras is the leader in delivering Microsoft Enterprise Open Source Solutions to address strategic business initiatives such as PLM new product introduction and APQP quality compliance." />
+<link rel="stylesheet" type="text/css" href="http://www.aras.com/styles/aras.css" />
+
+</head>
+
+<body scroll="no" style="padding-right:0px; padding-left:0px; font-size:8pt; padding-bottom:0px; padding-top:0px; font-family:tahoma, arial, helvetica, sans-serif; text-decoration:none" cellpadding="0" cellspacing="0">
+		<h1 align="left" style="font-size: 18pt;">Welcome to the Aras Community Project Site</h1>
+		<table width="100%" cellpadding="1" cellspacing="1" scroll="no">
 			<tr>
 				<td colspan="2">
-					<a href="http://www.aras.com/solutions/solutions_overview.aspx">
-						<img src="http://www.aras.com/newHome/images/newHome_02.jpg" width="539" height="58" border="0" alt="Microsoft Enterprise Open Source">
-					</a>
+					<a href="http://www.aras.com/solutions"><img src="http://www.aras.com/images_v2/MEOS-Banner.jpg" width="539" height="58" border="0" alt="Aras Microsoft Enterprise Open Source"> </a>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<img src="http://www.aras.com/images/spacer.gif" width="10" height="30" border="0">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<div style="PADDING-BOTTOM: 7px; WIDTH: 580px; TEXT-ALIGN: left">
-						June 27, 2008 -- welcome to the Aras Innovator community project site. <br><br>
-						Report all problems to <A href="mailto:support@aras.com?subject=Community Projects Site problem">support@aras.com</A>
-						<br><br>News:
+					<div style="padding-bottom: 7px; width: 580px; text-align: left; font-size: 12pt;">
+						April 1, 2009 -- welcome to the Aras Innovator Community Project site.
+						<br/>
+						Report all problems to <a href="mailto:support@aras.com?subject=Community Projects Site problem">	support@aras.com</a>
+						<br/>
+						<br/>
+						News:
 					</div>
-					<div style="PADDING-BOTTOM: 7px; 	WIDTH: 580px; 	TEXT-ALIGN: left">
-						<div >
-							<div style="FONT-SIZE:12px; FLOAT:left; PADDING-BOTTOM:2px; WIDTH:20px; LINE-HEIGHT:200%; PADDING-TOP:2px; TEXT-ALIGN:center">
-								<img src="http://www.aras.com/images/tempLayoutFiles/reg_bullet.gif" width="6" height="15" >
-							</div>
-							<div style="FONT-SIZE:12px; FLOAT:left; PADDING-BOTTOM:2px; WIDTH:550px; LINE-HEIGHT:200%; PADDING-TOP:2px; TEXT-ALIGN:left">
-								<b>New features released on June 27, 2008</b>
-								<br>Ability to email a url link to a Project 
-								<br>Search
-								<br><b>Recent Updates</b> category for a quick search for projects changed in the last 10 days
-								<br><br><br>
-							</div>
-						</div>						<div >
-							<div style="FONT-SIZE:12px; FLOAT:left; PADDING-BOTTOM:2px; WIDTH:20px; LINE-HEIGHT:200%; PADDING-TOP:2px; TEXT-ALIGN:center">
-								<img src="http://www.aras.com/images/tempLayoutFiles/reg_bullet.gif" width="6" height="15" >
-							</div>
-							<div style="FONT-SIZE:12px; FLOAT:left; PADDING-BOTTOM:2px; WIDTH:550px; LINE-HEIGHT:200%; PADDING-TOP:2px; TEXT-ALIGN:left">
-								<b>The Aras Community Network International Event was held on May 7, 2008</b>
-								<br>Copies of all Presentations are posted on the Aras Corp Blog. 
-								<br><font size="4"><a href="http://aras.com/community/blogs/Default.aspx" target="_blank">Jump to Blog Page</a></font>
-								<br><br><br>
-							</div>
+					<div style="padding-bottom: 7px; 	width: 580px; 	text-align: left">
+						<div class="NiceTightBullets" style="font-size:10pt; " >
+							<ul>
+								<li style="margin-top: 25px;"><b>Aras Community <a href="http://www.aras.com/community/forums" target="_blank">PLM Forums</a> and Blogs have been updated.  We are now running CommunityServer v 2008.5 now.  Look-and-Feel and Search features are both improved.
+								<li style="margin-top: 25px;"><b>At the Community Site we have added several <a href="http://www.aras.com/community/wikis" target="_blank">Wikis</a> with a growing PLM Encyclopedia and an <a href="http://www.aras.com/Community/wikis/kb/default.aspx" target="_blank">Aras Innovator KnowledgeBase</a>.  We encourage you to contribute.
+
+								<li style="margin-top: 25px;"><b>NEW! Version 9.1.0 </b><i>Now Available for Download</i><br/><br/><a href="http://www.aras.com/downloads" target="_blank"><img src="http://www.aras.com/images_v2/containers/container_downloadNow.gif" border="0" /></a></li>
+							</ul>
 						</div>
 					</div>
-					
 				</td>
 			</tr>
-			<tr>
-				<td colspan="2">
-					<img src="http://www.aras.com/images/spacer.gif" width="10" height="30" border="0">
-				</td>
-			</tr>
-
-</table>
-
-</body>
-</HTML>
+		</table>
+	</body>
+</html>

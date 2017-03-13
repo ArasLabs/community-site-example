@@ -1,17 +1,21 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC" %>
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC"  %>
 <%@ Import Namespace="System.IO" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-	<HEAD>
-		<title>projectOverview</title>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"  lang="en" >
+<head>
+
+<title>projectOverview</title>
+<meta name="Description" content="Aras is the leader in delivering Microsoft Enterprise Open Source Solutions to address strategic business initiatives such as PLM new product introduction and APQP quality compliance." />
+<link rel="stylesheet" type="text/css" href="http://www.aras.com/styles/aras.css" />
+
 <%
 	Dim id as String=Request.QueryString("pid")
   	LoadProjectDetail(id)
 	Dim myXML as System.Xml.XmlDocument
 	myXML = New System.Xml.XmlDocument()
-	myXML.preserveWhiteSpace = TRUE
+	myXML.preserveWhiteSpace = trUE
 	myXML.loadXML(Projects)
-	
+
 	dim author as String=" "
 	dim authorEmail as String=" "
 	dim name as String="unknown"
@@ -19,7 +23,10 @@
 	dim description as String = " "
 	dim downloads as String = "0"
 	dim rating as String = "0.0"
-	dim cp_type as String = ""
+	dim is_exchange as String = "0"
+	dim is_open as String = "1"
+	dim is_commercial as String = "0"
+	dim is_verified as String = "0"
 	dim cp_level as String = ""
 	dim cp_category as String=""
 	dim versions as String = ""
@@ -34,7 +41,7 @@
 		if not propNode is Nothing Then author = propNode.innertext
 		propNode = Node.selectSingleNode("author/Item/email")
 		if not propNode is Nothing Then authorEmail = propNode.innertext
-		
+
 		propNode = Node.selectSingleNode("name")
 		if not propNode is Nothing Then name = propNode.innertext
 		propNode = Node.selectSingleNode("url")
@@ -44,12 +51,39 @@
 		propNode = Node.selectSingleNode("downloads")
 		if not propNode is Nothing Then downloads = propNode.innertext
 		propNode = Node.selectSingleNode("rating")
-		if not propNode is Nothing Then 
+		if not propNode is Nothing Then
 			rating = propNode.innertext
 			if rating.indexOf(".") = -1 then rating=rating & ".0"
 		End If
-		propNode = Node.selectSingleNode("cp_type")
-		if not propNode is Nothing Then cp_type = propNode.innertext
+		propNode = Node.selectSingleNode("is_verified")
+		if not propNode is Nothing Then is_verified = propNode.innertext
+		if is_verified="1" then
+		   is_verified="Yes"
+		else
+		   is_verified="No"
+		End If
+		propNode = Node.selectSingleNode("is_open")
+		if not propNode is Nothing Then is_open = propNode.innertext
+		if is_open = "1" then
+		   is_open = "Yes"
+		else
+		   is_open = "No"
+		End If
+		propNode = Node.selectSingleNode("is_exchange")
+		if not propNode is Nothing Then is_exchange = propNode.innertext
+		if is_exchange="1" then
+		   is_exchange="Yes"
+		else
+		   is_exchange="No"
+		end if
+		propNode = Node.selectSingleNode("is_commercial")
+		if not propNode is Nothing Then is_commercial = propNode.innertext
+		if is_commercial="1" then
+		   is_commercial="Yes"
+		else
+		   is_commercial="No"
+		end if
+
 		propNode = Node.selectSingleNode("cp_level")
 		if not propNode is Nothing Then cp_level = propNode.innertext
 		propNode = Node.selectSingleNode("cp_category")
@@ -65,7 +99,7 @@
 		propNode = Node.selectSingleNode("thumbnail")
 		if not propNode is Nothing Then thumbnail = propNode.innertext
 	End If
-	
+
 	Dim PageTitle="Community Projects - " & name
 	' next section support cookie tracking of the end user
 	Dim uniqueID As String = "unknown"
@@ -88,91 +122,97 @@
 	End If
 
 	' now add the visitor information to the Visitor log
-	Dim fs As FileStream = new FileStream("c:\inetpub\Logs\Visitor.Log", FileMode.OpenOrCreate, FileAccess.Write)
-	Dim w As StreamWriter = new StreamWriter(fs)  '  create a Char writer
-	w.BaseStream.Seek(0, SeekOrigin.End)   '  set the file pointer to the end
-	w.Write( uniqueID & "," & PageTitle & "," & now & chr(13))
-	w.Flush()  '  update underlying file
-	w.Close()  '  close the writer and underlying file
-	'  done  cookies
+	Dim ClientIP as String = Request.UserHostAddress
+	Try
+		Dim fs As FileStream = new FileStream("c:\inetpub\Logs\Visitor.Log", FileMode.OpenOrCreate, FileAccess.Write)
+		Dim w As StreamWriter = new StreamWriter(fs)  '  create a Char writer
+		w.BaseStream.Seek(0, SeekOrigin.End)   '  set the file pointer to the end
+		w.Write( uniqueID & "," & PageTitle & "," & now & "," & ClientIP & chr(13))
+		w.Flush()  '  update underlying file
+		w.Close()  '  close the writer and underlying file
+	Catch exc as exception
+
+	Finally
+
+	End Try
 %>
-		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
-		<meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
-		<meta name="vs_defaultClientScript" content="JavaScript">
-		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-		
-		<script>
-			//set the Project Type on the top object for later use
-		    top.project_type = ""
 
-			function buildURL(){
-				var file_url = QueryString("file_url").toString();
-				file_url = encodeURI(file_url);
-			}
-    
-			function helpType() {
-				// open a model dialog to show the help
-				showModalDialog('helpType.htm',null,'dialogHeight:300px; dialogWidth:540px; status:0; help:0; resizable:1');
-			}
-			function helpLevel() {
-				// open a model dialog to show the help
-				showModalDialog('helpLevel.htm',null,'dialogHeight:350px; dialogWidth:540px; status:0; help:0; resizable:1');
-			}
-			
-			function addReview() {
-			    parent.document.Script.tabbar.setTabActive(parent.document.Script.tabbar.getTabByIndex(2));
+<script language="JavaScript" type="text/JavaScript">
+//set the Project Is-Exchange flag on the top object for later use
+ top.project_is_exchange = "0"
 
-		}
-		</script>
-	</HEAD>
-	<body margin="0" width="100%" scroll="no">
-		<script>top.project_type='<%=cp_type%>';</script>
-		<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="2" style='FONT-SIZE:11pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; TEXT-DECORATION:none'>
+function buildURL(){
+		var file_url = QueryString("file_url").toString();
+		file_url = encodeURI(file_url);
+}
+
+function helpVerified() {
+		// open a model dialog to show the help
+		showModalDialog('helpVerified.htm',null,'dialogHeight:300px; dialogWidth:540px; status:0; help:0; resizable:1');
+}
+function helpType() {
+		// open a model dialog to show the help
+		showModalDialog('helpType.htm',null,'dialogHeight:300px; dialogWidth:540px; status:0; help:0; resizable:1');
+}
+function helpLevel() {
+		// open a model dialog to show the help
+		showModalDialog('helpLevel.htm',null,'dialogHeight:350px; dialogWidth:540px; status:0; help:0; resizable:1');
+}
+
+function addReview() {
+		 parent.document.Script.tabbar.setTabActive(parent.document.Script.tabbar.getTabByIndex(2));
+
+}
+</script>
+</head>
+<body margin="0" width="100%" scroll="no">
+		<script language="JavaScript" type="text/JavaScript">top.project_is_exchange='<%=is_exchange%>';</script>
+		<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="1" style='font-size:11pt; font-family:tahoma, arial, helvetica, sans-serif; text-decoration:none'>
 			<tr height="100%" valign="top">
-				<td width="180">
-					<table cellpadding="0" cellspacing="0" width="160" border="0">
+				<td width="180" >
+					<table cellpadding="0" cellspacing="0" width="170" border="0">
 						<tr>
-							<td style="HEIGHT: 73px">
-								<a href="<%=ScreenShot%>" target="_blank"><img width="180" src="<%=thumbnail%>"></a>
+							<td style="height: 73px">
+								<a href="<%=ScreenShot%>" target="_blank"><img width="160" src="<%=thumbnail%>" alt="Aras PLM"></a>
 							</td>
 						</tr>
-						<tr height="10" style="BORDER-BOTTOM-COLOR: slategray; BORDER-BOTTOM-STYLE: solid">
+						<tr height="10" style="border-bottom-color: slategray; border-bottom-style: solid">
 							<td>
-								<img src="http://www.aras.com/images/spacer.gif" width="180" height="10">
+								&nbsp;
 							</td>
 						</tr>
-						<tr height="20" style="BORDER-BOTTOM-COLOR: slategray; BORDER-BOTTOM-STYLE: solid">
+						<tr height="20" style="border-bottom-color: slategray; border-bottom-style: solid">
 							<td align="center">
 								Downloads:&nbsp;&nbsp;&nbsp;<%=downloads%>
-								<br>
-								<br>
+								<br/>
+								<br/>
 							</td>
 						</tr>
-						<tr height="120" style="BORDER-BOTTOM-COLOR: slategray; BORDER-BOTTOM-STYLE: solid">
+						<tr height="120" style="border-bottom-color: slategray; border-bottom-style: ">
 							<td align="center">
 								<table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
 									<tr>
 										<td width="15%">
-											<br>
-											<br>
-											<br>
+											<br/>
+											<br/>
+											<br/>
 											&nbsp;
 										</td>
 										<td align="center" width="70%">
-											<DIV style="BORDER-LEFT-COLOR: slategray; BORDER-BOTTOM-COLOR: slategray; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: slategray; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: slategray; BORDER-BOTTOM-STYLE: solid">
+											<div style="border-left-color: slategray; border-bottom-color: slategray; border-top-style: solid; border-top-color: slategray; border-right-style: solid; border-left-style: solid; border-right-color: slategray; border-bottom-style: solid">
 												<% if rating = 0.0 then %>
-												Be the First to Review<br>this Project
-												<br>
+												Be the First to Review<br/>this Project
+												<br/>
 												<a href="JavaScript:addReview()">Click Here</a>
-												<img src="icons/review-<%=rating%>-5-stars.gif" border=0>
+												<img src="http://www.aras.com/communityProjects/icons/review-<%=rating%>-5-stars.gif" border=0>
 
 												<% else  %>
 												Average rating of
 												<H2><%=rating%></H2>
-												out of 5 stars<BR>
-												<img src="icons/review-<%=rating%>-5-stars.gif" border=0>
+												out of 5 stars<br/>
+												<img src="http://www.aras.com/communityProjects/icons/review-<%=rating%>-5-stars.gif" border=0>
 												<% End If %>
-											</DIV>
+											</div>
 										</td>
 										<td width="15%" height="20">
 											&nbsp;
@@ -184,20 +224,20 @@
 					</table>
 				</td>
 				<td align="left" >
-					<table  border="0" cellspacing="0" style="padding:0px 0px 10px 0px; FONT-SIZE:9pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif">
+					<table  border="0" cellpadding="0" cellspacing="0" style="padding:0px 0px 0px 0px; font-size:9pt; font-family:tahoma, arial, helvetica, sans-serif">
 						<tr height="10" padding-top="0">
-							<td colspan="3" ><font style="FONT-SIZE:11pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif">
-								<b>Description</b></font><hr width="100%">
+							<td colspan="3"  style="font-weight: bold;font-size:11pt; font-family:tahoma, arial, helvetica, sans-serif; ">
+								Description
 							</td>
 						</tr>
 						<tr>
-							<td colspan="3">
-								<textarea style="overflow-x: hidden; overflow-y: scroll; border:0; FONT-SIZE:8pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; height:190; width:380;"><%=description%></textarea>
+							<td colspan="3" style="border:1px solid #999; ">
+								<textarea style="overflow-x: hidden; overflow-y: scroll; font-size:8pt; font-family:tahoma, arial, helvetica, sans-serif; height:175px; width:506px;"><%=description%></textarea>
 							</td>
 						</tr>
-						<tr height="15">
-							<td colspan="3"><font style="FONT-SIZE:11pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif">
-								<b>Project Info</b></font><hr width="100%">
+						<tr >
+							<td colspan="3" style="font-weight: bold;font-size:11pt; font-family:tahoma, arial, helvetica, sans-serif">
+								Project Info<hr width="100%">
 							</td>
 						</tr>
 						<tr valign="bottom" height="15">
@@ -208,10 +248,10 @@
 							<% else %>
 							<td align="left" width="100%" style="padding:0px 0px 10px 0px;"><a href="mailto:<%=authorEmail%>?subject=About your Aras Community Solution: <%=name%>"><%=author%></a></td>
 							<% End IF %>
-							
+
 						</tr>
-						<% 
-							If cp_type = "Commercial" Then
+						<%
+							If is_commercial = "Yes" Then
 						%>
 						<tr valign="bottom" height="15">
 							<td align="left" style="padding:0px 0px 10px 0px;"><b>Web Site</b></td>
@@ -227,7 +267,7 @@
 							<td align="left" style="padding:0px 0px 10px 0px;"><%=license%></td>
 						</tr>
 						<tr valign="bottom" height="15">
-							<td align="left" style="padding:0px 0px 10px 0px;"><b>Versions<br>Supported</b></td>
+							<td align="left" style="padding:0px 0px 10px 0px;"><b>Versions<br/>Supported</b></td>
 							<td>&nbsp;</td>
 							<td align="left" style="padding:0px 0px 10px 0px;"><%=versions%></td>
 						</tr>
@@ -236,19 +276,34 @@
 							<td>&nbsp;</td>
 							<td align="left" style="padding:0px 0px 10px 0px;"><%=cp_category%></td>
 						</tr>
-						<tr valign="bottom" height="15">
-							<td align="left" ><b>Level</b></td>
+						<tr valign="middle" height="15">
+							<td align="left" style="padding:0px 0px 10px 0px;"><a href="JavaScript:helpLevel();"><b>Level</b></a></td>
 							<td>&nbsp;</td>
-							<td align="left"><a href="JavaScript:helpLevel();"><%=cp_level%></a></td>
+							<td align="left" style="padding:0px 0px 10px 0px;"><%=cp_level%></td>
 						</tr>
 						<tr valign="bottom" height="15">
-							<td align="left" ><b>Type</b></td>
+							<td align="left" ><a href="JavaScript:helpVerified();"><b>Verified?</b></a></td>
 							<td>&nbsp;</td>
-							<td align="left"><a href="JavaScript:helpType();"><%=cp_type%></a></td>
+							<td align="left"><%=is_verified%></td>
 						</tr>
+
+						<tr valign="middle" height="15"><td>&nbsp;</td></tr>
+
+						<tr valign="middle" >
+							<td align="left" ><a href="JavaScript:helpType();"><b>Type</b></a></td>
+							<td>&nbsp;</td>
+							<td align="left">
+								<table  border="0" cellspacing="0" style="padding:0px 0px 10px 0px; font-size:9pt; font-family:tahoma, arial, helvetica, sans-serif">
+								<tr><td><b>Open:</b></td><td width="3">&nbsp;</td><td><%=is_open%></td></tr>
+								<tr><td><b>Subscribers Only:</b></td><td width="3">&nbsp;</td><td><%=is_exchange%></td></tr>
+								<tr><td><b>Commercial:</b></td><td width="3">&nbsp;</td><td><%=is_commercial%></td></tr>
+								</table>
+							</td>
+						</tr>
+
 					</table>
 				</td>
 			</tr>
 		</table>
 	</body>
-</HTML>
+</html>

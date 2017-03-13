@@ -1,10 +1,10 @@
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC" %>
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC"  %>
 <%@ Import namespace="System.IO" %>
 <%	Dim pid as String=Request.QueryString("pid")
     dim fid as String=Request.QueryString("fid")
     dim name as String=Request.QueryString("name")
     GETFILE(pid,fid)
-    
+
     ' log the download against the cookie
     Dim PageTitle="Community Projects - Downloaded - " & name
 	' next section support cookie tracking of the end user
@@ -27,23 +27,25 @@
 			End If
 		End If
 
-	' now add the visitor information to the Visitor log
-	Dim fs As FileStream = new FileStream("c:\inetpub\Logs\Visitor.Log", FileMode.OpenOrCreate, FileAccess.Write)
-	Dim w As StreamWriter = new StreamWriter(fs)  '  create a Char writer
-		w.BaseStream.Seek(0, SeekOrigin.End)   '  set the file pointer to the end
-		w.Write( uniqueID & "," & PageTitle & "," & now & chr(13))
-		w.Flush()  '  update underlying file
-		w.Close()  '  close the writer and underlying file
-	'  done  cookies
+		' now add the visitor information to the Visitor log
+		Dim ClientIP as String = Request.UserHostAddress
+		Try
+			Dim fs As FileStream = new FileStream("c:\inetpub\Logs\Visitor.Log", FileMode.OpenOrCreate, FileAccess.Write)
+			Dim w As StreamWriter = new StreamWriter(fs)  '  create a Char writer
+			w.BaseStream.Seek(0, SeekOrigin.End)   '  set the file pointer to the end
+			w.Write( uniqueID & "," & PageTitle & "," & now & "," & ClientIP & chr(13))
+			w.Flush()  '  update underlying file
+			w.Close()  '  close the writer and underlying file
+		Catch exc as exception
+
+		Finally
+
+		End Try
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"  lang="en" >
   <head>
     <title>FileDownload</title>
-    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
-    <meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
-    <meta name=vs_defaultClientScript content="JavaScript">
-    <meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
   </head>
   <body onLoad="JavaScript:window.location.href='<%=fileURL%>'">
   </body>

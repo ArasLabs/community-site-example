@@ -1,0 +1,36 @@
+﻿<AML>
+ <Item type="Permission" id="F3CDBF60E5614273A33B096C0D8FC82A" action="add">
+  <is_private>0</is_private>
+  <name>cp_registration_active</name>
+  <Relationships>
+   <Item type="Access" id="333E76DCE89B40D2B58D742B5E38EB61" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_registration_active" type="Permission">F3CDBF60E5614273A33B096C0D8FC82A</source_id>
+   </Item>
+  
+   <Item type="Access" id="4E5B4062A6F54FB1B5550CFAE2254701" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_registration_active" type="Permission">F3CDBF60E5614273A33B096C0D8FC82A</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

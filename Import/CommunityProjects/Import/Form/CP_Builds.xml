@@ -1,5 +1,6 @@
 ﻿<AML>
  <Item type="Form" id="957E36B4DC6F494E9675E53F33E97273" action="add">
+  <classification>/*</classification>
   <height>250</height>
   <name>CP_Builds</name>
   <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
@@ -10,21 +11,21 @@
     <bg_color>#FFFFFF</bg_color>
     <bg_image>../images/Backgrounds/wvleft.gif</bg_image>
     <bg_repeat>no-repeat</bg_repeat>
+    <classification>/*</classification>
     <sort_order>128</sort_order>
     <source_id keyed_name="CP_Builds" type="Form">957E36B4DC6F494E9675E53F33E97273</source_id>
     <Relationships>
      <Item type="Field" id="DAB290C03572438CA8EE7B61CE32E4C4" action="add">
       <bg_color>#FFFFFF</bg_color>
+      <classification>/*</classification>
       <field_type>html</field_type>
       <font_size>18</font_size>
       <font_weight>bold</font_weight>
-      <html_code></html_code>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Project Build</label>
+      <label xml:lang="en">Project Build</label>
       <list_no_blank>0</list_no_blank>
       <name>item_info</name>
-      <positioning>absolute</positioning>
       <sort_order>128</sort_order>
       <source_id keyed_name="D836AB4F97F549CDACE621D7E082F8B2" type="Body">D836AB4F97F549CDACE621D7E082F8B2</source_id>
       <tab_stop>0</tab_stop>
@@ -34,6 +35,7 @@
      <Item type="Field" id="318E226394C642DEB06DEAAA72825388" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <field_type>textarea</field_type>
       <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
@@ -41,11 +43,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Notes</label>
+      <label xml:lang="en">Notes</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>notes</name>
-      <positioning>absolute</positioning>
       <propertytype_id keyed_name="notes" type="Property">AA381D3EE2F447CFAB3106D92BF334EE</propertytype_id>
       <sort_order>512</sort_order>
       <source_id keyed_name="D836AB4F97F549CDACE621D7E082F8B2" type="Body">D836AB4F97F549CDACE621D7E082F8B2</source_id>
@@ -59,6 +60,7 @@
      <Item type="Field" id="DB354004507246E69DEF83FCF38089BB" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <display_length>40</display_length>
       <field_type>item</field_type>
       <font_color>#000000</font_color>
@@ -67,11 +69,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
       <is_visible>1</is_visible>
-      <label>Project</label>
+      <label xml:lang="en">Project</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>source_id</name>
-      <positioning>absolute</positioning>
       <sort_order>640</sort_order>
       <source_id keyed_name="D836AB4F97F549CDACE621D7E082F8B2" type="Body">D836AB4F97F549CDACE621D7E082F8B2</source_id>
       <tab_index>3072</tab_index>
@@ -82,6 +83,7 @@
      <Item type="Field" id="FDE9787BA2C94FB9A4AB3151895E0730" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <display_length>8</display_length>
       <field_type>text</field_type>
       <font_color>#000000</font_color>
@@ -90,11 +92,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Version</label>
+      <label xml:lang="en">Version</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>version</name>
-      <positioning>absolute</positioning>
       <propertytype_id keyed_name="version" type="Property">ED75D1EDDC0646478368678A9F95C85A</propertytype_id>
       <sort_order>768</sort_order>
       <source_id keyed_name="D836AB4F97F549CDACE621D7E082F8B2" type="Body">D836AB4F97F549CDACE621D7E082F8B2</source_id>

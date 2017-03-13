@@ -1,15 +1,18 @@
 ﻿<AML>
  <Item type="List" id="E1FF20B910034732A77C26B81565B99E" action="add">
+  <classification>/*</classification>
   <name>CP_License</name>
   <Relationships>
    <Item type="Value" id="412E379A60D8490AB2FCEF6978966402" action="add">
-    <label>Microsoft CL</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Microsoft CL</label>
     <sort_order>128</sort_order>
     <source_id keyed_name="CP_License" type="List">E1FF20B910034732A77C26B81565B99E</source_id>
     <value>Microsoft CL</value>
    </Item>
    <Item type="Value" id="583D910BC5E24154B513CCB866AB1569" action="add">
-    <label>Microsoft Public License</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Microsoft Public License</label>
     <sort_order>256</sort_order>
     <source_id keyed_name="CP_License" type="List">E1FF20B910034732A77C26B81565B99E</source_id>
     <value>Microsoft Public License</value>

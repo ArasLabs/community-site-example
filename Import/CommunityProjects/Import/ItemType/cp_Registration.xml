@@ -1,0 +1,159 @@
+﻿<AML>
+ <Item type="ItemType" id="2847E192B5104AEBAC87B07565CB826C" action="add">
+  <allow_private_permission>0</allow_private_permission>
+  <auto_search>1</auto_search>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <implementation_type>table</implementation_type>
+  <instance_data>CP_REGISTRATION</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>0</is_versionable>
+  <label xml:lang="en">Package Registration</label>
+  <label_plural xml:lang="en">Registrations</label_plural>
+  <large_icon>../images/Icons/32x32/32x32_lists.gif</large_icon>
+  <manual_versioning>0</manual_versioning>
+  <name>cp_Registration</name>
+  <open_icon>../images/Icons/16x16/16x16_viewWith.gif</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tab view</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <Relationships>
+   <Item type="Allowed Permission" id="C94734F5576A4D5F86190D7F0BCD6B90" action="add">
+    <is_default>0</is_default>
+    <related_id keyed_name="cp_registration_active" type="Permission">F3CDBF60E5614273A33B096C0D8FC82A</related_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+   </Item>
+  
+   <Item type="Allowed Permission" id="F352767F05AE43EFBCFD2175BF49A3DF" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="cp_registration_inProcess" type="Permission">41489ACF86954110BBD959AC3720D107</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+   </Item>
+   <Item type="Can Add" id="575B0F1B8D9C46A3979E4998DD95A972" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+   </Item>
+   <Item type="ItemType Life Cycle" id="77D077D979AF40FDB679E86FF5813A5C" action="add">
+    <related_id keyed_name="cp_Registration" type="Life Cycle Map">21693EDFCB8E4120BC17C30C3A8F6BF9</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+   </Item>
+   <Item type="Property" id="467590419B074F4D86DB761C6AAACA7E" action="add">
+    <classification>/*</classification>
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_source keyed_name="Account" type="ItemType" name="Account">3CD0FBDED0F74F28A833B97A5E751F43</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Company</label>
+    <name>company</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="79E5913D393F4DF9A9E05E349A6C5FF7" action="add">
+    <classification>/*</classification>
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_source keyed_name="Contact" type="ItemType" name="Contact">579E2E64FE4A4683825B46500B05DFEF</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Contact</label>
+    <name>contact</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>12</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="Property" id="297C8EC45A5644789CD771CD5DF0BE1D" action="add">
+    <classification>/*</classification>
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Name</label>
+    <name>name</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+   </Item>
+   <Item type="TOC Access" id="13112B24A9664BE78EBBC2AFA5D7667B" action="add">
+    <category>Development</category>
+    <classification>/*</classification>
+    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+   </Item>
+   <Item type="View" id="38AEF95B1C8342D9892BDCD4CC0B942A" action="add">
+    <classification>/*</classification>
+    <client>js</client>
+    <related_id keyed_name="cp_Registration" type="Form">3198FCE80CC24872B31C26BB105CF99C</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+    <type>default</type>
+   </Item></Relationships>
+ </Item>
+ <Item type="ItemType" id="2847E192B5104AEBAC87B07565CB826C" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='2847E192B5104AEBAC87B07565CB826C' and name='state'">
+    <classification>/*</classification>
+    <column_alignment>center</column_alignment>
+    <column_width>100</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Status</label>
+    <name>state</name>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>4</sort_order>
+    <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,5 +1,6 @@
 ﻿<AML>
  <Item type="Form" id="FA029A7A928E41578D858454932D085C" action="add">
+  <classification>/*</classification>
   <height>280</height>
   <name>CP_Forum_Reply</name>
   <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
@@ -10,12 +11,14 @@
     <bg_color>#FFFFFF</bg_color>
     <bg_image>../images/Backgrounds/wvleft.gif</bg_image>
     <bg_repeat>no-repeat</bg_repeat>
+    <classification>/*</classification>
     <sort_order>128</sort_order>
     <source_id keyed_name="CP_Forum_Reply" type="Form">FA029A7A928E41578D858454932D085C</source_id>
     <Relationships>
      <Item type="Field" id="7787615C40574FAC912ED0DA471B18AC" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <field_type>item</field_type>
       <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
@@ -23,11 +26,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Author</label>
+      <label xml:lang="en">Author</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>author</name>
-      <positioning>absolute</positioning>
       <propertytype_id keyed_name="author" type="Property">14B3E4100AEA464C90FA0D681DE035A3</propertytype_id>
       <sort_order>256</sort_order>
       <source_id keyed_name="F9CB46C0F09946949A6E84EBE9B4B85C" type="Body">F9CB46C0F09946949A6E84EBE9B4B85C</source_id>
@@ -37,8 +39,8 @@
       <y>44</y>
      </Item>
      <Item type="Field" id="CFDC03727B2A4787AD6A1F80B59711C4" action="add">
-      <bg_color>beige  </bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <field_type>date</field_type>
       <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
@@ -46,11 +48,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Created On</label>
+      <label xml:lang="en">Created On</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>created_on</name>
-      <positioning>absolute</positioning>
       <sort_order>640</sort_order>
       <source_id keyed_name="F9CB46C0F09946949A6E84EBE9B4B85C" type="Body">F9CB46C0F09946949A6E84EBE9B4B85C</source_id>
       <tab_index>6</tab_index>
@@ -60,30 +61,20 @@
      </Item>
      <Item type="Field" id="271CCE56980D4C9EB0C6D7BD75AFB7B5" action="add">
       <bg_color>#FFFFFF</bg_color>
+      <classification>/*</classification>
       <field_type>html</field_type>
-      <html_code><![CDATA[<table border='0' cellspacing='0' cellpadding='0'>
-<tr><td colspan='2'>
+      <html_code><![CDATA[<span id="ITEM_INFO_INTERNAL_SPAN"/>
 <script>
-  document.write('<img hspace="20" vspace="20" src="' + top.aras.getItemProperty(document.itemType,'large_icon') + '">');
-</Script>
-</td></tr>
-<tr><td colspan='2'><img src='../images/lines/wvline.gif'></td></tr>
-<tr><td colspan='2'><img src='../images/icons/other/1x1.gif' width='1' height='10'></td></tr>
-<tr><td><img src='../images/icons/other/1x1.gif' width='20' height='1'>
-<td width='150'><p class='vbig'><b>
-<script>
-  var labelIT = top.aras.getItemProperty(document.itemType, 'label'); 
-  if (labelIT == '') labelIT = document.itemTypeName; 
-  document.write(labelIT);
-</Script>
-</b></p>
-</td></tr></table>
-]]></html_code>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById("ITEM_INFO_INTERNAL_SPAN").innerHTML = top.aras.uiDrawItemInfoTable(document.itemType,null,new Array(0));
+  }
+  window.attachEvent("onload", populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
       <list_no_blank>0</list_no_blank>
       <name>item_info</name>
-      <positioning>absolute</positioning>
       <sort_order>128</sort_order>
       <source_id keyed_name="F9CB46C0F09946949A6E84EBE9B4B85C" type="Body">F9CB46C0F09946949A6E84EBE9B4B85C</source_id>
       <tab_stop>0</tab_stop>
@@ -93,6 +84,7 @@
      <Item type="Field" id="DFB2EF3765FE48CDB69053B4DA95C5A8" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <field_type>textarea</field_type>
       <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
@@ -100,11 +92,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label>Message</label>
+      <label xml:lang="en">Message</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>message</name>
-      <positioning>absolute</positioning>
       <propertytype_id keyed_name="message" type="Property">25481DF2A59A45B2B76094942C164518</propertytype_id>
       <sort_order>512</sort_order>
       <source_id keyed_name="F9CB46C0F09946949A6E84EBE9B4B85C" type="Body">F9CB46C0F09946949A6E84EBE9B4B85C</source_id>
@@ -118,6 +109,7 @@
      <Item type="Field" id="BCD4DD467FDA47F5842B84ADC00007E6" action="add">
       <bg_color>#FFFFFF</bg_color>
       <border_width>0</border_width>
+      <classification>/*</classification>
       <field_type>item</field_type>
       <font_color>#000000</font_color>
       <font_family>arial, helvetica, sans-serif</font_family>
@@ -125,11 +117,10 @@
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
       <is_visible>1</is_visible>
-      <label>Forum Entry</label>
+      <label xml:lang="en">Forum Entry</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <name>source_id</name>
-      <positioning>absolute</positioning>
       <sort_order>384</sort_order>
       <source_id keyed_name="F9CB46C0F09946949A6E84EBE9B4B85C" type="Body">F9CB46C0F09946949A6E84EBE9B4B85C</source_id>
       <tab_index>3072</tab_index>

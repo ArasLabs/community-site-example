@@ -1,4 +1,4 @@
-<%@ Page CodeBehind="AddForumReply.aspx.vb" Language="vb" AutoEventWireup="false" Inherits="CommunityProjects.AddForumReply" %>
+<%@ Page CodeBehind="AddForumReply.aspx.vb" Language="vb" AutoEventWireup="false" Inherits="CommunityProjects.AddForumReply"  %>
 <%
 	Dim fid as String=Request.QueryString("fid")
 	Dim author as String=Request.QueryString("author")

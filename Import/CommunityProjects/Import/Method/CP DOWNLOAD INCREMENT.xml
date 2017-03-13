@@ -1,5 +1,6 @@
 ﻿<AML>
  <Item type="Method" id="E14E55BF60EA4B9E9CD450639119B72D" action="add">
+  <classification>/*</classification>
   <comments>Increments the counter on a Community projecy</comments>
   <method_code><![CDATA[Dim id As String = Me.getID()
 Dim callframe As Item = Me.newitem("SQL","SQL PROCESS")

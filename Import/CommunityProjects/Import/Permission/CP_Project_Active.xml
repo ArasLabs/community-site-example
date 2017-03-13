@@ -4,38 +4,87 @@
   <name>CP_Project_Active</name>
   <Relationships>
    <Item type="Access" id="4858DBF7A3AE4BE6A80B6A9879334DEE" action="add">
-    <can_change_access>0</can_change_access>
+    <can_change_access>1</can_change_access>
     <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
     <can_get>1</can_get>
     <can_update>1</can_update>
+    <classification>/*</classification>
     <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
     <sort_order>384</sort_order>
     <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
    </Item>
+   <Item type="Access" id="27E8D4CE5A994D65AE53D743D48A58ED" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+   <Item type="Access" id="97FC3A0B31A7463C8976D903777F5BEB" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Development Management" type="Identity">B5F965E0415C4A4B9940975E1220C8C7</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+   <Item type="Access" id="575D0F9327844C47A91CB714C82D3494" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+  
    <Item type="Access" id="30173950B1C447BCB42C915D85035FA4" action="add">
     <can_change_access>0</can_change_access>
     <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
     <can_get>1</can_get>
     <can_update>1</can_update>
+    <classification>/*</classification>
     <related_id keyed_name="Owner" type="Identity">
      <Item type="Identity" action="get" select="id">
       <name>Owner</name>
      </Item>
     </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
     <sort_order>640</sort_order>
     <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
    </Item>
-  
    <Item type="Access" id="54EA436C3BFB4712BBF1157999AAFB2F" action="add">
     <can_change_access>0</can_change_access>
     <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
     <can_get>1</can_get>
-    <can_update>1</can_update>
+    <can_update>0</can_update>
+    <classification>/*</classification>
     <related_id keyed_name="World" type="Identity">
      <Item type="Identity" action="get" select="id">
       <name>World</name>
      </Item>
     </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
     <sort_order>128</sort_order>
     <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
    </Item></Relationships>

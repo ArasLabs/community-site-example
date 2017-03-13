@@ -1,10 +1,12 @@
 ﻿<AML>
  <Item type="Life Cycle Map" id="9115E301175046DB9084ED90768C280C" action="add">
+  <classification>/*</classification>
   <description>Community Projects</description>
   <name>CP_Project</name>
   <start_state keyed_name="Idea" type="Life Cycle State">5A39E5671F50499E97C18F237146BD05</start_state>
   <Relationships>
    <Item type="Life Cycle State" id="F73FB9367272496986501EFD5A55776F" action="add">
+    <classification>/*</classification>
     <image>../images/icons/20x20/20x15_lifecycle.gif</image>
     <name>Active</name>
     <set_is_released>0</set_is_released>
@@ -16,6 +18,7 @@
     <y>48</y>
    </Item>
    <Item type="Life Cycle State" id="F6520D5481B840E0B892F55261E53B0B" action="add">
+    <classification>/*</classification>
     <image>../images/icons/20x20/20x15_lifecycle.gif</image>
     <name>Archive</name>
     <set_is_released>0</set_is_released>
@@ -27,6 +30,7 @@
     <y>54</y>
    </Item>
    <Item type="Life Cycle State" id="5A39E5671F50499E97C18F237146BD05" action="add">
+    <classification>/*</classification>
     <image>../images/icons/20x20/20x15_lifecycle.gif</image>
     <name>Idea</name>
     <set_is_released>0</set_is_released>
@@ -37,6 +41,7 @@
     <y>48</y>
    </Item>
    <Item type="Life Cycle Transition" id="B5F9AA3FFBDF414D9D4AB7EC2CF3C669" action="add">
+    <classification>/*</classification>
     <from_state keyed_name="Active" type="Life Cycle State">F73FB9367272496986501EFD5A55776F</from_state>
     <get_comment>0</get_comment>
     <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
@@ -49,6 +54,7 @@
    </Item>
   
    <Item type="Life Cycle Transition" id="8CABBAB6710F4615A9270F1564000632" action="add">
+    <classification>/*</classification>
     <from_state keyed_name="Archive" type="Life Cycle State">F6520D5481B840E0B892F55261E53B0B</from_state>
     <get_comment>0</get_comment>
     <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
@@ -60,9 +66,10 @@
     <y>32</y>
    </Item>
    <Item type="Life Cycle Transition" id="10FF82F1FB47414FBE18B3861F146194" action="add">
+    <classification>/*</classification>
     <from_state keyed_name="Idea" type="Life Cycle State">5A39E5671F50499E97C18F237146BD05</from_state>
     <get_comment>0</get_comment>
-    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <role keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</role>
     <segments></segments>
     <sort_order>384</sort_order>
     <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>

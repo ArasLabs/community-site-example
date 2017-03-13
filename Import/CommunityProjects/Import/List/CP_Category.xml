@@ -1,59 +1,69 @@
 ﻿<AML>
  <Item type="List" id="33485F1B49784DC1A501B15CF02C7467" action="add">
+  <classification>/*</classification>
   <description>Community Projects</description>
   <name>CP_Category</name>
   <Relationships>
-   <Item type="Value" id="89B014C6D4D64A488A9BDD80A838CBB4" action="add">
-    <label>Alternate Clients</label>
-    <sort_order>5</sort_order>
-    <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
-    <value>Alternate Clients</value>
-   </Item>
    <Item type="Value" id="65776D0DB6DA4FD4B4B1A0A3A54EEF25" action="add">
-    <label>Connectors</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Connectors</label>
     <sort_order>4</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Connectors</value>
    </Item>
    <Item type="Value" id="0F6AAC848DA54A138AEE974F2D730AE3" action="add">
-    <label>Hot Fixes</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Hot Fixes</label>
     <sort_order>10</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Hot Fixes</value>
    </Item>
    <Item type="Value" id="58BA03ACA99F4A8E92B59EC327A4D982" action="add">
-    <label>Innovator Framework</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Innovator Framework</label>
     <sort_order>1</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Innovator Framework</value>
    </Item>
    <Item type="Value" id="1A8ACCC2FAEE4FC6A02944173644E67A" action="add">
-    <label>Language Packs</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Language Packs</label>
     <sort_order>11</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Language Packs</value>
    </Item>
    <Item type="Value" id="FBA11722AF5B44429FAED3366CBD5797" action="add">
-    <label>Project Templates</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Project Templates</label>
     <sort_order>12</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Project Templates</value>
    </Item>
   
+   <Item type="Value" id="89B014C6D4D64A488A9BDD80A838CBB4" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Sample Code</label>
+    <sort_order>5</sort_order>
+    <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
+    <value>Sample Code</value>
+   </Item>
    <Item type="Value" id="4E82B771826143E099306CB47103E15F" action="add">
-    <label>Solution Add-Ons</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Solution Add-Ons</label>
     <sort_order>3</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Solution Add-Ons</value>
    </Item>
    <Item type="Value" id="80E401D14B1349378D359E6D5F2B73B9" action="add">
-    <label>Solutions</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Solutions</label>
     <sort_order>2</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Solutions</value>
    </Item>
    <Item type="Value" id="967648F0291241DF99ADA98DC3730B85" action="add">
-    <label>Utilities</label>
+    <classification>/*</classification>
+    <label xml:lang="en">Utilities</label>
     <sort_order>6</sort_order>
     <source_id keyed_name="CP_Category" type="List">33485F1B49784DC1A501B15CF02C7467</source_id>
     <value>Utilities</value>

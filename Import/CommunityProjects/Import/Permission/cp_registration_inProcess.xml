@@ -1,0 +1,52 @@
+﻿<AML>
+ <Item type="Permission" id="41489ACF86954110BBD959AC3720D107" action="add">
+  <is_private>0</is_private>
+  <name>cp_registration_inProcess</name>
+  <Relationships>
+   <Item type="Access" id="AA20219BD3204876BED0244B0A3CFB49" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_registration_inProcess" type="Permission">41489ACF86954110BBD959AC3720D107</source_id>
+   </Item>
+   <Item type="Access" id="EBE56B5DF51146CFB0E8142E172A5F7A" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="Internal" type="Identity">256B634AB20547E7B94AD763C49FF385</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="cp_registration_inProcess" type="Permission">41489ACF86954110BBD959AC3720D107</source_id>
+   </Item>
+  
+   <Item type="Access" id="0C1854BE7C7842939A07B960E1719AD0" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <classification>/*</classification>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_registration_inProcess" type="Permission">41489ACF86954110BBD959AC3720D107</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

@@ -199,6 +199,17 @@
                     BuildAction = "EmbeddedResource"
                 />
                 <File
+                    RelPath = "TOC.aspx.vb"
+                    DependentUpon = "default.aspx"
+                    SubType = "ASPXCodeBehind"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "TOC.aspx.resx"
+                    DependentUpon = "TOC.aspx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
                     RelPath = "FileDownload.aspx"
                     BuildAction = "Content"
                 />
@@ -241,6 +252,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "helpVerified.htm"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "jsTab.css"
                     BuildAction = "Content"
                 />
@@ -253,7 +268,7 @@
                     BuildAction = "Content"
                 />
                 <File
-                    RelPath = "Login.htm"
+                    RelPath = "login.htm"
                     BuildAction = "Content"
                 />
                 <File
@@ -269,17 +284,6 @@
                 <File
                     RelPath = "project.aspx.resx"
                     DependentUpon = "project.aspx.vb"
-                    BuildAction = "EmbeddedResource"
-                />
-                <File
-                    RelPath = "TOC.aspx.vb"
-                    DependentUpon = "project.aspx"
-                    SubType = "ASPXCodeBehind"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "TOC.aspx.resx"
-                    DependentUpon = "TOC.aspx.vb"
                     BuildAction = "EmbeddedResource"
                 />
                 <File
@@ -373,7 +377,7 @@
                     BuildAction = "EmbeddedResource"
                 />
                 <File
-                    RelPath = "TOC.aspx"
+                    RelPath = "SubscriberLogin.htm"
                     BuildAction = "Content"
                 />
                 <File

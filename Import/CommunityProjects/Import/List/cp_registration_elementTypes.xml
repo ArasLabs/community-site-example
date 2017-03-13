@@ -1,0 +1,78 @@
+﻿<AML>
+ <Item type="List" id="27DC6440E682408F8B3C3319D24F5AD3" action="add">
+  <classification>/*</classification>
+  <name>cp_registration_elementTypes</name>
+  <Relationships>
+   <Item type="Value" id="566BE8F8A25542B58DEC74E41D1E72F2" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Action</label>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Action</value>
+   </Item>
+   <Item type="Value" id="EB26D09E2F81432B9441D09636F6932E" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Form</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Form</value>
+   </Item>
+   <Item type="Value" id="5195ECBE42274408BDCA0BCE85B7B67F" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Identity</label>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Identity</value>
+   </Item>
+   <Item type="Value" id="7BB57A95F9764092AAA6B56D4A5E4D90" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">ItemType</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>ItemType</value>
+   </Item>
+   <Item type="Value" id="97B5FB416B02426CB3ACDA38842AB840" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Life Cycle</label>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Life Cycle</value>
+   </Item>
+   <Item type="Value" id="0DB6D6C9BFA94734B493952BA834F16F" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">List</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>List</value>
+   </Item>
+   <Item type="Value" id="89412187F7D84798BA793A47C02EC12F" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Method</label>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Method</value>
+   </Item>
+   <Item type="Value" id="E0560D404BB64A7DADD4C4FB9B780E53" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Permission</label>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Permission</value>
+   </Item>
+  
+   <Item type="Value" id="AEA4A0E852D84540A8051111C9A37011" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Sequence</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Sequence</value>
+   </Item>
+   <Item type="Value" id="09049DB59D384E22B02BE57139C6E92A" action="add">
+    <classification>/*</classification>
+    <label xml:lang="en">Workflow Map</label>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="cp_registration_elementTypes" type="List">27DC6440E682408F8B3C3319D24F5AD3</source_id>
+    <value>Workflow Map</value>
+   </Item></Relationships>
+ </Item>
+</AML>

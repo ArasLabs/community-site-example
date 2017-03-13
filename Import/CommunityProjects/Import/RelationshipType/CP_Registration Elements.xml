@@ -1,0 +1,108 @@
+﻿<AML>
+ <Item type="RelationshipType" id="C8F0A0E29BDE44C18D667581488DA39B" action="add" dependencyLevel="0">
+  <auto_search>1</auto_search>
+  <behavior>float</behavior>
+  <classification>/*</classification>
+  <copy_permissions>0</copy_permissions>
+  <create_related>0</create_related>
+  <hide_in_all>0</hide_in_all>
+  <inc_rel_key_name>1</inc_rel_key_name>
+  <inc_related_key_name>1</inc_related_key_name>
+  <is_list_type>0</is_list_type>
+  <label xml:lang="en">Elements</label>
+  <name>CP_Registration Elements</name>
+  <new_show_related>0</new_show_related>
+  <related_notnull>0</related_notnull>
+  <related_option>2</related_option>
+  <relationship_id keyed_name="CP_Registration Elements" type="ItemType" name="CP_Registration Elements">
+   <Item type="ItemType" id="82FD9CD57CEB4599B99860625FFD49C8" action="add">
+    <allow_private_permission>1</allow_private_permission>
+    <auto_search>0</auto_search>
+    <enforce_discovery>0</enforce_discovery>
+    <hide_where_used>0</hide_where_used>
+    <implementation_type>table</implementation_type>
+    <instance_data>CP_REGISTRATION_ELEMENTS</instance_data>
+    <is_dependent>0</is_dependent>
+    <is_relationship>1</is_relationship>
+    <is_versionable>0</is_versionable>
+    <manual_versioning>0</manual_versioning>
+    <name>CP_Registration Elements</name>
+    <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+    <show_parameters_tab>1</show_parameters_tab>
+    <unlock_on_logout>0</unlock_on_logout>
+    <use_src_access>1</use_src_access>
+    <Relationships>
+     <Item type="ItemType Life Cycle" id="3DCBD474E01F4A0494ED99A87CBAC0AF" action="add">
+      <related_id keyed_name="Default" type="Life Cycle Map">2F3B75E17C4E4F2D9599579A965BFA64</related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="CP_Registration Elements" type="ItemType" name="CP_Registration Elements">82FD9CD57CEB4599B99860625FFD49C8</source_id>
+     </Item>
+    
+     <Item type="Property" id="B2BE23BF8DC64B9A94A653E3862FDAEC" action="add">
+      <classification>/*</classification>
+      <column_alignment>center</column_alignment>
+      <column_width>250</column_width>
+      <data_type>string</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">ID</label>
+      <name>element_id</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>4</sort_order>
+      <source_id keyed_name="CP_Registration Elements" type="ItemType" name="CP_Registration Elements">82FD9CD57CEB4599B99860625FFD49C8</source_id>
+      <stored_length>32</stored_length>
+      <track_history>0</track_history>
+     </Item>
+     <Item type="Property" id="0CAC38E9839C46FC83F11D473D9E371A" action="add">
+      <classification>/*</classification>
+      <column_alignment>left</column_alignment>
+      <column_width>370</column_width>
+      <data_type>string</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Keyed Name</label>
+      <name>element_kn</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>8</sort_order>
+      <source_id keyed_name="CP_Registration Elements" type="ItemType" name="CP_Registration Elements">82FD9CD57CEB4599B99860625FFD49C8</source_id>
+      <stored_length>64</stored_length>
+      <track_history>0</track_history>
+     </Item>
+     <Item type="Property" id="1EFEE18889E34934A20E3F83A23DC535" action="add">
+      <classification>/*</classification>
+      <column_alignment>center</column_alignment>
+      <column_width>150</column_width>
+      <data_source keyed_name="cp_registration_elementTypes">27DC6440E682408F8B3C3319D24F5AD3</data_source>
+      <data_type>list</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Type</label>
+      <name>element_type</name>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>2</sort_order>
+      <source_id keyed_name="CP_Registration Elements" type="ItemType" name="CP_Registration Elements">82FD9CD57CEB4599B99860625FFD49C8</source_id>
+      <track_history>0</track_history>
+     </Item></Relationships>
+   </Item>
+  </relationship_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="cp_Registration" type="ItemType" name="cp_Registration">2847E192B5104AEBAC87B07565CB826C</source_id>
+ </Item>
+ <Item type="View" action="delete" where="source_id='82FD9CD57CEB4599B99860625FFD49C8'"></Item>
+ <Item type="Form" action="delete" where="name='CP_Registration Elements'"></Item>
+</AML>

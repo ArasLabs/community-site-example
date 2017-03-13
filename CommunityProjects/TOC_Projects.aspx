@@ -1,19 +1,14 @@
 <%@ Import namespace="System.Xml" %>
-<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-  <HEAD>
-	<title>TOC</title>
-	<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
-	<meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
-	<meta name="vs_defaultClientScript" content="JavaScript">
-	<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
-	<link rel="stylesheet" type href="http://www.aras.com/styles/LandingPage.css" css?? text>
-	
-<style type="text/css"> .innerb {height:345px; width:145px; overflow-x: hidden; overflow-y: scroll; }
-	</style>
-	
-<script>
+<%@ Page Language="vb" AutoEventWireup="false" Codebehind="TOC.aspx.vb" Inherits="CommunityProjects.TOC"%>
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/Dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"  lang="en" >
+<head>
+<title>TOC</title>
+<meta name="Description" content="Aras is the leader in delivering Microsoft Enterprise Open Source Solutions to address strategic business initiatives such as PLM new product introduction and APQP quality compliance." />
+<link rel="stylesheet" type="text/css" href="http://www.aras.com/styles/aras.css" />
+
+
+<script language="JavaScript" type="text/JavaScript">
 function onMain() {
 	top.document.all.maincontent.src="projectMain.aspx";
 }
@@ -23,37 +18,42 @@ function onCategory(which,id){
 	top.document.all['maincontent'].src="projectBrowser.aspx?cat="+which;
 
 }
-	
+
 function onProject(which,id){
-	top.document.all.maincontent.src="project.aspx?pid=" + id;
+	 
+	    top.document.all.maincontent.src="project.aspx?pid=" + id;
+}
+
+function TABLE1_onclick() {
+
 }
 
 </script>
-</HEAD>
+</head>
 <body bgcolor="#e0e0e0" leftmargin="0" rightmargin="0" bottommargin="0" height="100%">
 <div>
-			<table border="0" width="100%" height="100" style="PADDING-RIGHT:0px; PADDING-LEFT:0px; FONT-SIZE:8pt; PADDING-BOTTOM:0px; PADDING-TOP:0px; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; TEXT-DECORATION:none" cellpadding="0" cellspacing="0">
-				<tr height="10"><td align="left" onclick="onMain();"><b><font style="FONT-SIZE:11pt">Aras Projects</font></b><br><hr width="100%"></td></tr>
-				<tr height="10"><td align="left"><b><font style="FONT-SIZE:9pt">Browse By Category</font></b></td></tr>
-				<TR height="20" valign="top" margin="0">
+			<table border="0" width="100%" height="100" style="padding-right:0px; padding-left:0px; font-size:8pt; padding-bottom:0px; padding-top:0px; font-family:tahoma, arial, helvetica, sans-serif; text-decoration:none" cellpadding="0" cellspacing="0">
+				<tr height="10"><td align="left" onclick="onMain();"><b><font style="font-size:11pt">Aras Projects</font></b><br/><hr width="100%"></td></tr>
+				<tr height="10"><td align="left"><b><font style="font-size:9pt">Browse By Category</font></b></td></tr>
+				<tr height="20" valign="top" margin="0">
 					<td height="20">
-						<DIV id=buttonFrame style="TEXT-INDENT: 5px; HEIGHT: 20px; TEXT-ALIGN: left">
-							<DIV id=button style="top-margin:0">
-							<UL>
+						<div id=buttonFrame style="text-indent: 5px; height: 20px; text-align: left">
+							<div id=button style="margin-top:0">
+							<ul>
 							<li>
-							<A href="JavaScript:onCategory('Recent','0');"><b>Recent Updates...</b>
-							</A>
+							<a href="JavaScript:onCategory('Recent','0');"><b>Recent Updates...</b>
+							</a>
 							</li>
-							</UL>
-							</DIV>
-						</DIV>
+							</ul>
+							</div>
+						</div>
 					</td>
-				</TR>
+				</tr>
 			<%
 				loadTOC()
 				Dim CatsXML as System.Xml.XmlDocument
 				CatsXML = New XmlDocument()
-				CatsXML.preserveWhiteSpace = TRUE
+				CatsXML.preserveWhiteSpace = trUE
 				CatsXML.loadXML(Categories)
 				Dim Nodes As System.Xml.XmlNodeList = CatsXML.selectNodes("//Item[@type='Value']")
 				Dim Node As System.Xml.XmlElement
@@ -64,35 +64,35 @@ function onProject(which,id){
 					Dim propNode As System.Xml.XmlElement = Node.selectSingleNode("value")
 					if not propNode is Nothing Then
 						CatName = propNode.innertext
-					End If	
+					End If
 				%>
-				<TR height="20" valign="top" margin="0">
+				<tr height="20" valign="top" margin="0">
 					<td height="20">
-						<DIV id=buttonFrame style="TEXT-INDENT: 5px; HEIGHT: 20px; TEXT-ALIGN: left">
-							<DIV id=button style="top-margin:0">
-							<UL>
+						<div id=buttonFrame style="text-indent: 5px; height: 20px; text-align: left">
+							<div id=button style="margin-top:0">
+							<ul>
 							<li>
-							<A href="JavaScript:onCategory('<%=CatName%>','<%=catId%>');"><%=CatName%>
-							</A>
+							<a href="JavaScript:onCategory('<%=CatName%>','<%=catId%>');"><%=CatName%>
+							</a>
 							</li>
-							</UL>
-							</DIV>
-						</DIV>
+							</ul>
+							</div>
+						</div>
 					</td>
-				</TR>
+				</tr>
 				<%
 				next
 				%>
 
-			<tr height="10"><td align="left"><img src="http://www.aras.com/images/spacer.gif" width="10" height="10" border="0"></td></tr>
+			<tr height="10"><td align="left">&nbsp;</td></tr>
 		</table>
 </div>
 <div>
-		<table border="0" width="100%" height="100" style="PADDING-RIGHT:0px; PADDING-LEFT:0px; FONT-SIZE:8pt; PADDING-BOTTOM:0px; PADDING-TOP:0px; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; TEXT-DECORATION:none" cellpadding="0" cellspacing="0">
-			<tr height="10"><td align="left"><b><font style="FONT-SIZE:9pt">Browse By Project</font></b></td></tr>
+		<table border="0" width="100%" height="100" style="padding-right:0px; padding-left:0px; font-size:8pt; padding-bottom:0px; padding-top:0px; font-family:tahoma, arial, helvetica, sans-serif; text-decoration:none" cellpadding="0" cellspacing="0">
+			<tr height="10"><td align="left" style="font-size:9ptl font-weight:bold;">Browse By Project</td></tr>
       <tr><td >
-		<div class="innerb" >
-			<table border="0" height="100%" style="PADDING-RIGHT:0px; PADDING-LEFT:5px; FONT-SIZE:8pt; PADDING-BOTTOM:0px; PADDING-TOP:0px; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; TEXT-DECORATION:none; border-spacing:0px" cellpadding="0" cellspacing="0">
+		<div style="height:345px; width:145px; overflow-x: hidden; overflow-y: scroll; " >
+			<table border="0" height="100%" style="padding-right:0px; padding-left:5px; font-size:8pt; padding-bottom:0px; padding-top:0px; font-family:tahoma, arial, helvetica, sans-serif; text-decoration:none; border-spacing:0px" cellpadding="0" cellspacing="0" id="TABLE1" language="javascript" onclick="return TABLE1_onclick()">
 				<%
 				CatsXML.loadXML(Projects)
 				Nodes  = CatsXML.selectNodes("//Item[@type='CP_CommunityProject']")
@@ -100,25 +100,26 @@ function onProject(which,id){
 					Dim CatName as String = " "
 					Dim CatId as String = Node.getAttribute("id")
 					' Load the properties
-					Dim propNode As System.Xml.XmlElement = Node.selectSingleNode("name")
-					if not propNode is Nothing Then
-						CatName = propNode.innertext
-					End If	
+				        Dim propNode As System.Xml.XmlElement = Node.SelectSingleNode("name")
+				        If Not propNode Is Nothing Then
+				            CatName = propNode.InnerText
+				        End If
+
 				%>
-				<TR valign="top">
+				<tr valign="top">
 					<td >
-						<DIV  >
-							<DIV id=button > 
-							<UL>
+						<div  >
+							<div id=button >
+							<ul>
 							<li >
-							<A href="JavaScript:onProject('<%=CatName%>','<%=catId%>');"><div style="WIDTH:115px; TEXT-ALIGN:left; WORD-WRAP:break-word"><%=CatName%></div>
-							</A>
+							<a href="JavaScript:onProject('<%=CatName%>','<%=catId%>');"><div style="width:115px; text-align:left; WORD-WRAP:break-word"><%=CatName%></div>
+							</a>
 							</li>
-							</UL>
-							</DIV>
-						</DIV>
+							</ul>
+							</div>
+						</div>
 					</td>
-				</TR>
+				</tr>
 				<%
 				next
 				%>
@@ -129,4 +130,4 @@ function onProject(which,id){
 	</div>
 
 	</body>
-</HTML>
+</html>

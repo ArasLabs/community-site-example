@@ -1,5 +1,6 @@
 ﻿<AML>
  <Item type="Method" id="C3292408B1FD44399FD269D20CE87AE5" action="add">
+  <classification>/*</classification>
   <method_code><![CDATA['  Used to send an email when someone posts a forum entry on the Projects site
 '  This method sends an email to the Project Owner and the original poster
 '
@@ -75,15 +76,15 @@ If owner="" Then
 End If
 'CCO.Utilities.WriteDebug("Forum","Contact for Project is " & Owner)
  
-Dim email As System.Web.Mail.MailMessage = New System.Web.Mail.MailMessage()
-email.From = "community@aras.com"
+Dim email As New System.Net.Mail.MailMessage() 
+email.From = New System.Net.Mail.MailAddress("community@aras.com")
 If ForumAuthorEmail = "" Then
-   email.To = Owner
+   email.To.Add(Owner)
 Else
-  email.To = Owner & ";" & ForumAuthorEmail
+  email.To.Add(Owner & "," & ForumAuthorEmail)
 End If 
 email.Subject = "Community Project Forum Posting: " & Project
-email.BodyFormat = System.Web.Mail.MailFormat.Html
+email.isBodyHtml = True 
 email.Body = "<HTML><BODY><p>Reply Posting by: " & ReplyAuthor & "</p><br><p>On the topic: " & Topic & "</p><br><p>The Reply is:  " & Message & "</p></BODY></HTML>"
 cco.email.setup_smtpmail_server_and_send(email)
 Return Me
