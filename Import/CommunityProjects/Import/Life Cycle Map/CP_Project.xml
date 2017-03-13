@@ -1,0 +1,74 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="9115E301175046DB9084ED90768C280C" action="add">
+  <description>Community Projects</description>
+  <name>CP_Project</name>
+  <start_state keyed_name="Idea" type="Life Cycle State">5A39E5671F50499E97C18F237146BD05</start_state>
+  <Relationships>
+   <Item type="Life Cycle State" id="F73FB9367272496986501EFD5A55776F" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Active</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <state_permission_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</state_permission_id>
+    <x>144</x>
+    <y>48</y>
+   </Item>
+   <Item type="Life Cycle State" id="F6520D5481B840E0B892F55261E53B0B" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Archive</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <state_permission_id keyed_name="CP_Project_Archive" type="Permission">E4E7DE7B9BBF40A0B386D4BCF9104300</state_permission_id>
+    <x>375</x>
+    <y>54</y>
+   </Item>
+   <Item type="Life Cycle State" id="5A39E5671F50499E97C18F237146BD05" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Idea</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <x>16</x>
+    <y>48</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="B5F9AA3FFBDF414D9D4AB7EC2CF3C669" action="add">
+    <from_state keyed_name="Active" type="Life Cycle State">F73FB9367272496986501EFD5A55776F</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <segments>211,39|327,39</segments>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <to_state keyed_name="Archive" type="Life Cycle State">F6520D5481B840E0B892F55261E53B0B</to_state>
+    <x>63</x>
+    <y>-26</y>
+   </Item>
+  
+   <Item type="Life Cycle Transition" id="8CABBAB6710F4615A9270F1564000632" action="add">
+    <from_state keyed_name="Archive" type="Life Cycle State">F6520D5481B840E0B892F55261E53B0B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <segments>325,80|204,80</segments>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <to_state keyed_name="Active" type="Life Cycle State">F73FB9367272496986501EFD5A55776F</to_state>
+    <x>-165</x>
+    <y>32</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="10FF82F1FB47414FBE18B3861F146194" action="add">
+    <from_state keyed_name="Idea" type="Life Cycle State">5A39E5671F50499E97C18F237146BD05</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</role>
+    <segments></segments>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="CP_Project" type="Life Cycle Map">9115E301175046DB9084ED90768C280C</source_id>
+    <to_state keyed_name="Active" type="Life Cycle State">F73FB9367272496986501EFD5A55776F</to_state>
+    <x>17</x>
+    <y>-4</y>
+   </Item></Relationships>
+ </Item>
+</AML>

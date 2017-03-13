@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="Method" id="E14E55BF60EA4B9E9CD450639119B72D" action="add">
+  <comments>Increments the counter on a Community projecy</comments>
+  <method_code><![CDATA[Dim id As String = Me.getID()
+Dim callframe As Item = Me.newitem("SQL","SQL PROCESS")
+callframe.setproperty("name","COMMUNITYPROJECT_DOWNLOAD_INCREMENT")
+callframe.setproperty("PROCESS","CALL")
+callframe.setproperty("ARG1", id)
+Dim resultframe As Item = callframe.apply()
+If resultframe.isError() Then
+ Return(resultframe)
+End If
+
+Dim result_text = resultframe.getproperty("result_text")
+
+If result_text <> "SUCCESS" Then
+ Return Me.newinnovator.newError("COMMUNITYPROJECT_DOWNLOAD_INCREMENT " + result_text)
+End If
+
+Return Me.newinnovator.newResult(result_text)
+
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>CP DOWNLOAD INCREMENT</name>
+ </Item>
+</AML>

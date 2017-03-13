@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Community Login</title>
+<meta name=vs_defaultClientScript content="JavaScript">
+<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name=ProgId content=VisualStudio.HTML>
+<meta name=Originator content="Microsoft Visual Studio .NET 7.1">
+<script>
+function testEmail() {
+	var testing = email.value;
+	if (testing=="") {
+		alert("Please enter you email address");
+	} else {
+		var resStr="na"
+		var xmlhttp = new ActiveXObject("Msxml2.XMLHTTP.3.0");
+		var url = 'http://www.aras.com/support/LookupContact.aspx?email=' + testing;
+		xmlhttp.open('POST', url, false);
+		try {
+			xmlhttp.send();
+			resStr = xmlhttp.responseText;
+			var xmlDom = new ActiveXObject("Microsoft.XMLDOM");
+			xmlDom.async = false;
+			xmlDom.preserveWhiteSpace = true;
+			xmlDom.validateOnParse = false;
+			xmlDom.loadXML(resStr);
+            var status="";
+			var node = xmlDom.selectSingleNode("//email2");
+			var statusNode = xmlDom.selectSingleNode("//account_state");
+			if (node && node.text == testing) {
+				node= xmlDom.selectSingleNode("//Item[@type='Contact']");
+				returnValue=new Object();
+				returnValue.id=node.getAttribute("id");
+				if (statusNode) status = statusNode.text;
+				returnValue.status=status;
+				xmlhttp = null;		 
+				window.close();
+			} else {
+				alert('Email address not recognized, please try again, or cancel and register');
+			}
+		 }
+		 catch (excep) {
+			xmlhttp = null;		 
+			resStr="Login not possible right now.\nError:" + excep.description;
+		 }
+		 xmlhttp = null;		 
+	}
+}
+function doCancel() {
+   returnValue="";
+   window.close();
+}
+
+</script>
+</head>
+<body MS_POSITIONING="GridLayout" style='FONT-SIZE:8pt; FONT-FAMILY:tahoma, arial, helvetica, sans-serif; TEXT-DECORATION:none'>
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+<tr valign="middle">
+	<td colspan="2">
+		<table cellpadding="o" cellspacing="0" border="0">
+			<tr>
+				<td><img height="60" width="60" src="icons/aras.gif" border="0"></td>
+				<td align="left"><b>Enter Email Address</b></td>
+				<td>:<input type="text" id="Text1" name="email" size="25" ></td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td align="center" width="50%"><input type="button" id="cancel" name="cancel" value="cancel" onclick="doCancel();"></td>
+	<td align="center" width="50%"><input type="button" id="login" name="login" value="login" onclick="testEmail();"></td>
+</tr>
+</table>
+
+
+</body>
+</html>

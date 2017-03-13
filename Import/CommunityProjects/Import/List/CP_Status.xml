@@ -1,0 +1,26 @@
+﻿<AML>
+ <Item type="List" id="EC2D7353C5BC4120A4B014D86FCC5607" action="add">
+  <description>Community projects development Status</description>
+  <name>CP_Status</name>
+  <Relationships>
+   <Item type="Value" id="E1C0C685A5024111A3B550EF78EE3F11" action="add">
+    <label>Development</label>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="CP_Status" type="List">EC2D7353C5BC4120A4B014D86FCC5607</source_id>
+    <value>Development</value>
+   </Item>
+   <Item type="Value" id="9FF470C4C73D4D27AA4F0C0A5B2E2379" action="add">
+    <label>Idea</label>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="CP_Status" type="List">EC2D7353C5BC4120A4B014D86FCC5607</source_id>
+    <value>Idea</value>
+   </Item>
+   <Item type="Value" id="D535786457A443E6AAB521FE8A756C24" action="add">
+    <label>Production Ready</label>
+    <sort_order>3</sort_order>
+    <source_id keyed_name="CP_Status" type="List">EC2D7353C5BC4120A4B014D86FCC5607</source_id>
+    <value>Production Ready</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

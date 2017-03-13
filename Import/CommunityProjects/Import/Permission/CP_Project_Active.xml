@@ -1,0 +1,43 @@
+﻿<AML>
+ <Item type="Permission" id="E9524091F5AB4694A87C71B92FB8AA99" action="add">
+  <is_private>0</is_private>
+  <name>CP_Project_Active</name>
+  <Relationships>
+   <Item type="Access" id="4858DBF7A3AE4BE6A80B6A9879334DEE" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+   <Item type="Access" id="30173950B1C447BCB42C915D85035FA4" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item>
+  
+   <Item type="Access" id="54EA436C3BFB4712BBF1157999AAFB2F" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="CP_Project_Active" type="Permission">E9524091F5AB4694A87C71B92FB8AA99</source_id>
+   </Item></Relationships>
+ </Item>
+</AML>

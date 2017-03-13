@@ -1,0 +1,58 @@
+﻿<AML>
+ <Item type="Method" id="8F679B659B054DCFA51444016C9DCD22" action="add">
+  <method_code><![CDATA['  Used to send an email when someone posts a forum entry on the Projects site
+'
+'  peter  05.02.2008
+'
+'
+'===============================================================================
+'Me.dom.save(CCO.Server.MapPath("./logs/Forum.xml"))
+'CCO.Utilities.WriteDebug("Forum","Start")
+
+Dim ProjectID As String = Me.getProperty("source_id","")
+If ProjectID="" Then 
+   'CCO.Utilities.WriteDebug("Forum","No Project ID")
+   Return Me
+End If
+
+Dim Project As String = Me.getPropertyAttribute("source_id","keyed_name","")
+
+Dim Topic As String = Me.GetProperty("topic","")
+Dim Message As String = Me.GetProperty("message","")
+
+Dim Author As String = Me.getPropertyAttribute("author","keyed_name","")
+'CCO.Utilities.WriteDebug("Forum","Author is " & Author)
+
+'  get the Owner of this project
+Dim ProjectItem = Me.newItem("CP_CommunityProject","get")
+ProjectItem.setID(ProjectID)
+ProjectItem.setAttribute("select","author(email)")
+ProjectItem = ProjectItem.apply()
+If ProjectItem.isError() Then 
+   'CCO.Utilities.WriteDebug("Forum","Project Query Failed " & ProjectItem.getErrorDetail() )
+   Return Me
+End If
+
+Dim Owner = ProjectItem.getItemsByXPath("//Item[@type='Contact']")
+If  Owner.getItemCount() < 1 Then Return Me
+Owner = Owner.getItemByIndex(0).getProperty("email","")
+If owner="" Then 
+   'CCO.Utilities.WriteDebug("Forum","No Contact item on CP_CommunityProject")
+   Return Me
+End If
+'CCO.Utilities.WriteDebug("Forum","Contact for Project is " & Owner)
+ 
+Dim email As System.Web.Mail.MailMessage = New System.Web.Mail.MailMessage()
+email.From = "community@aras.com"
+email.To = Owner
+email.Subject = "Community Project Forum Posting: " & Project
+email.BodyFormat = System.Web.Mail.MailFormat.Html
+email.Body = "<HTML><BODY><p>Posting by: " & Author & "</p><br><p>The topic is: " & Topic & "</p><br><p>The Message is:  " & Message & "</p></BODY></HTML>"
+cco.email.setup_smtpmail_server_and_send(email)
+Return Me
+
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>CP_Forum On Add</name>
+ </Item>
+</AML>

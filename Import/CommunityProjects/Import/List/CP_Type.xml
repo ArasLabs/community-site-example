@@ -1,0 +1,31 @@
+﻿<AML>
+ <Item type="List" id="E60F86F4B5D74E73B21AE4F6AB2490B1" action="add">
+  <name>CP_Type</name>
+  <Relationships>
+   <Item type="Value" id="EB2209E8C62C46729FDC461CDECCAA93" action="add">
+    <label>Commercial</label>
+    <sort_order>3</sort_order>
+    <source_id keyed_name="CP_Type" type="List">E60F86F4B5D74E73B21AE4F6AB2490B1</source_id>
+    <value>Commercial</value>
+   </Item>
+   <Item type="Value" id="88AD6A1A5C5247A4A5EAE666EEF0CDC5" action="add">
+    <label>Exchange</label>
+    <sort_order>2</sort_order>
+    <source_id keyed_name="CP_Type" type="List">E60F86F4B5D74E73B21AE4F6AB2490B1</source_id>
+    <value>Exchange</value>
+   </Item>
+   <Item type="Value" id="241907681F1E4A848A71AAE464794B30" action="add">
+    <label>Exclusive</label>
+    <sort_order>4</sort_order>
+    <source_id keyed_name="CP_Type" type="List">E60F86F4B5D74E73B21AE4F6AB2490B1</source_id>
+    <value>Exclusive</value>
+   </Item>
+  
+   <Item type="Value" id="F6FA9EB11DE347FEA7ED832626E4BF5F" action="add">
+    <label>Open</label>
+    <sort_order>1</sort_order>
+    <source_id keyed_name="CP_Type" type="List">E60F86F4B5D74E73B21AE4F6AB2490B1</source_id>
+    <value>Open</value>
+   </Item></Relationships>
+ </Item>
+</AML>

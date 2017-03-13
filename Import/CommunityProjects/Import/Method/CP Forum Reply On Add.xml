@@ -1,0 +1,95 @@
+﻿<AML>
+ <Item type="Method" id="C3292408B1FD44399FD269D20CE87AE5" action="add">
+  <method_code><![CDATA['  Used to send an email when someone posts a forum entry on the Projects site
+'  This method sends an email to the Project Owner and the original poster
+'
+'
+'  peter  05.02.2008
+'
+'
+'===============================================================================
+'Me.dom.save(CCO.Server.MapPath("./logs/Forum.xml"))
+'CCO.Utilities.WriteDebug("Forum","Start")
+
+Dim ForumID As String = Me.getProperty("source_id","")
+If ForumID="" Then 
+   CCO.Utilities.WriteDebug("Forum","No Forum ID")
+   Return Me
+End If
+
+' fetch the project information and topic from Forum Entry
+Dim ForumItem = Me.newItem("CP_Forum","get")
+ForumItem.setID(ForumID)
+ForumItem.setAttribute("select","source_id,topic,author(email)")
+ForumItem = ForumItem.apply()
+
+If ForumItem.isError() Then
+   CCO.Utilities.WriteDebug("Forum","Forum Query Failed " & ForumItem.getErrorDetail() )
+   Return Me
+End If
+ForumItem = ForumItem.getItemsByXPath("//Item[@type='CP_Forum']")
+
+If ForumItem.getItemCount() < 1 Then
+   CCO.Utilities.WriteDebug("Forum","Forum Query returned no results")
+   Return Me
+End If
+
+ForumItem = ForumItem.getItemByIndex(0)
+'CCO.Utilities.WriteDebug("Forum","Found Forum item")
+
+Dim ProjectID As String = ForumItem.getProperty("source_id","")
+If ProjectID="" Then 
+   CCO.Utilities.WriteDebug("Forum","No Project ID")
+   Return Me
+End If
+
+Dim Topic As String = ForumItem.GetProperty("topic","")
+Dim Message As String = Me.GetProperty("message","")
+
+Dim ReplyAuthor As String = Me.getPropertyAttribute("author","keyed_name","")
+'CCO.Utilities.WriteDebug("Forum","Reply Author is " & ReplyAuthor)
+
+Dim ForumAuthorItem = ForumItem.getPropertyItem("author")
+If ForumAuthorItem Is Nothing Then
+   CCO.Utilities.WriteDebug("Forum","No Forum author Item")
+   Return Me
+End If
+Dim ForumAuthorEmail As String = ForumAuthorItem.getProperty("email","")
+
+'  get the Owner of this project
+Dim ProjectItem = Me.newItem("CP_CommunityProject","get")
+ProjectItem.setID(ProjectID)
+ProjectItem.setAttribute("select","keyed_name,author(email)")
+ProjectItem = ProjectItem.apply()
+If ProjectItem.isError() Then 
+   CCO.Utilities.WriteDebug("Forum","Project Query Failed " & ProjectItem.getErrorDetail() )
+   Return Me
+End If
+Dim Project As String = Me.getProperty("keyed_name","")
+Dim Owner = ProjectItem.getItemsByXPath("//Item[@type='Contact']")
+If  Owner.getItemCount() < 1 Then Return Me
+Owner = Owner.getItemByIndex(0).getProperty("email","")
+If owner="" Then 
+   CCO.Utilities.WriteDebug("Forum","No Contact item on CP_CommunityProject")
+   Return Me
+End If
+'CCO.Utilities.WriteDebug("Forum","Contact for Project is " & Owner)
+ 
+Dim email As System.Web.Mail.MailMessage = New System.Web.Mail.MailMessage()
+email.From = "community@aras.com"
+If ForumAuthorEmail = "" Then
+   email.To = Owner
+Else
+  email.To = Owner & ";" & ForumAuthorEmail
+End If 
+email.Subject = "Community Project Forum Posting: " & Project
+email.BodyFormat = System.Web.Mail.MailFormat.Html
+email.Body = "<HTML><BODY><p>Reply Posting by: " & ReplyAuthor & "</p><br><p>On the topic: " & Topic & "</p><br><p>The Reply is:  " & Message & "</p></BODY></HTML>"
+cco.email.setup_smtpmail_server_and_send(email)
+Return Me
+
+]]></method_code>
+  <method_type>VB</method_type>
+  <name>CP Forum Reply On Add</name>
+ </Item>
+</AML>

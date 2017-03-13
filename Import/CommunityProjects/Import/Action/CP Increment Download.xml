@@ -1,0 +1,14 @@
+﻿<AML>
+ <Item type="Action" id="6E46D8B2D1BF4B45A5694326BCEA424C" action="add">
+  <item_query>___is_new___</item_query>
+  <location>server</location>
+  <method keyed_name="CP DOWNLOAD INCREMENT" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>CP DOWNLOAD INCREMENT</name>
+   </Item>
+  </method>
+  <name>CP Increment Download</name>
+  <target>window</target>
+  <type>item</type>
+ </Item>
+</AML>

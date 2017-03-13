@@ -1,0 +1,30 @@
+﻿<AML>
+ <Item type="SQL" id="D1CCAEA2EA874BF0846B90A1EB4D21DE" action="add">
+  <execution_count>6</execution_count>
+  <execution_flag>manual</execution_flag>
+  <name>COMMUNITYPROJECT_DOWNLOAD_INCREMENT</name>
+  <old_name>COMMUNITYPROJECT_DOWNLOAD_INCREMENT</old_name>
+  <sqlserver_body><![CDATA[create procedure COMMUNITYPROJECT_DOWNLOAD_INCREMENT(@PROJECT_ID CHAR(32))
+AS
+BEGIN
+
+declare @NAME as VARCHAR(64)
+SET @NAME = (select name from CP_COMMUNITYPROJECT where id=@PROJECT_ID)
+if @name IS NULL
+BEGIN
+   Select 'FAILURE:  Project not found' as result_text
+   return
+END
+
+Update CP_COMMUNITYPROJECT
+set DOWNLOADS = DOWNLOADS + 1 
+where id=@PROJECT_ID
+
+select 'SUCCESS' as result_text
+
+END]]></sqlserver_body>
+  <stale>0</stale>
+  <transform_first>0</transform_first>
+  <type>procedure</type>
+ </Item>
+</AML>

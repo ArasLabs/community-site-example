@@ -15,12 +15,14 @@ Release notes/descriptions for the original project posted on the previous Aras 
 
 Release | Notes
 --------|--------
+[v2.0](https://github.com/ArasLabs/community-site-example/releases/tag/v2.0) | Release for Innovator 8.2.0 and 9.0.1. Also many feature enhancements. The project is still only tested with Visual Studio 2003 NOTE: I renamed the Package for this release. before you import into an Innovator instance that has the com.aras.Communityprojects already loaded, you need to either rename or delete your existing package, to allow this package to load. Single zip file has the Innovator Solution package and the Visual Studio solution.
 [v1.0](https://github.com/ArasLabs/community-site-example/releases/tag/v1.0) | Initial release - supports 8.1.1
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
+[v2.0](https://github.com/ArasLabs/community-site-example/releases/tag/v2.0) | Aras 8.2.0, 9.0.1
 [v1.0](https://github.com/ArasLabs/community-site-example/releases/tag/v1.0) | Aras 8.1.1
 
 > ###### *Please note: Aras Community Projects are provided on an "as-is" basis.*
